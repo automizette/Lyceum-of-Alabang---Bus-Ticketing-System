@@ -51,6 +51,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -73,6 +74,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication.vb" />
+    <Compile Include="CheckBusData.vb" />
+    <Compile Include="CollectData.vb" />
+    <Compile Include="Database.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +85,103 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAddOTP.Designer.vb">
+      <DependentUpon>frmAddOTP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddOTP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.vb">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDenyCancel_Reason.Designer.vb">
+      <DependentUpon>frmDenyCancel_Reason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDenyCancel_Reason.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLCredits_CashIn.Designer.vb">
+      <DependentUpon>frmLCredits_CashIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLCredits_CashIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModAdminMainMenu.Designer.vb">
+      <DependentUpon>frmModAdminMainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModAdminMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotificationInformation.Designer.vb">
+      <DependentUpon>frmNotificationInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotificationInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOTPValidation.Designer.vb">
+      <DependentUpon>frmOTPValidation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOTPValidation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayment_Subscribe.Designer.vb">
+      <DependentUpon>frmPayment_Subscribe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPayment_Subscribe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPremiumMembershipInformation.Designer.vb">
+      <DependentUpon>frmPremiumMembershipInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPremiumMembershipInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceipt.Designer.vb">
+      <DependentUpon>frmReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeatPicker.Designer.vb">
+      <DependentUpon>frmSeatPicker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeatPicker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSendFeedback.Designer.vb">
+      <DependentUpon>frmSendFeedback.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSendFeedback.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSignUp.Designer.vb">
+      <DependentUpon>frmSignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransactionHistory.Designer.vb">
+      <DependentUpon>frmTransactionHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransactionHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserMainMenu.Designer.vb">
+      <DependentUpon>frmUserMainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserNotification.Designer.vb">
+      <DependentUpon>frmUserNotification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserNotification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modify.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,16 +198,76 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Notification.vb" />
+    <Compile Include="SearchEngine.vb" />
+    <Compile Include="SystemTester.Designer.vb">
+      <DependentUpon>SystemTester.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemTester.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOTP.resx">
+      <DependentUpon>frmAddOTP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDenyCancel_Reason.resx">
+      <DependentUpon>frmDenyCancel_Reason.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLCredits_CashIn.resx">
+      <DependentUpon>frmLCredits_CashIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModAdminMainMenu.resx">
+      <DependentUpon>frmModAdminMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotificationInformation.resx">
+      <DependentUpon>frmNotificationInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOTPValidation.resx">
+      <DependentUpon>frmOTPValidation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayment_Subscribe.resx">
+      <DependentUpon>frmPayment_Subscribe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPremiumMembershipInformation.resx">
+      <DependentUpon>frmPremiumMembershipInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceipt.resx">
+      <DependentUpon>frmReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeatPicker.resx">
+      <DependentUpon>frmSeatPicker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSendFeedback.resx">
+      <DependentUpon>frmSendFeedback.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSignUp.resx">
+      <DependentUpon>frmSignUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransactionHistory.resx">
+      <DependentUpon>frmTransactionHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserMainMenu.resx">
+      <DependentUpon>frmUserMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserNotification.resx">
+      <DependentUpon>frmUserNotification.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemTester.resx">
+      <DependentUpon>SystemTester.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

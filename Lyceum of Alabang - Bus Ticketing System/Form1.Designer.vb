@@ -23,24 +23,26 @@ Partial Class frmLogin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblUsername = New System.Windows.Forms.Label()
         Me.TxtUsername = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblPassword = New System.Windows.Forms.Label()
         Me.TxtPassword = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnAuthenticate = New System.Windows.Forms.Button()
+        Me.LnkSignUp = New System.Windows.Forms.LinkLabel()
+        Me.LblNotify = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Label1
+        'LblUsername
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(297, 152)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Username"
+        Me.LblUsername.AutoSize = True
+        Me.LblUsername.BackColor = System.Drawing.Color.Transparent
+        Me.LblUsername.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsername.Location = New System.Drawing.Point(297, 152)
+        Me.LblUsername.Name = "LblUsername"
+        Me.LblUsername.Size = New System.Drawing.Size(82, 18)
+        Me.LblUsername.TabIndex = 0
+        Me.LblUsername.Text = "Username"
         '
         'TxtUsername
         '
@@ -50,16 +52,16 @@ Partial Class frmLogin
         Me.TxtUsername.Size = New System.Drawing.Size(228, 23)
         Me.TxtUsername.TabIndex = 1
         '
-        'Label2
+        'LblPassword
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(297, 228)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 18)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Password"
+        Me.LblPassword.AutoSize = True
+        Me.LblPassword.BackColor = System.Drawing.Color.Transparent
+        Me.LblPassword.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPassword.Location = New System.Drawing.Point(297, 228)
+        Me.LblPassword.Name = "LblPassword"
+        Me.LblPassword.Size = New System.Drawing.Size(78, 18)
+        Me.LblPassword.TabIndex = 2
+        Me.LblPassword.Text = "Password"
         '
         'TxtPassword
         '
@@ -68,6 +70,7 @@ Partial Class frmLogin
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.Size = New System.Drawing.Size(228, 23)
         Me.TxtPassword.TabIndex = 3
+        Me.TxtPassword.UseSystemPasswordChar = True
         '
         'Label3
         '
@@ -86,12 +89,37 @@ Partial Class frmLogin
         Me.BtnAuthenticate.BackColor = System.Drawing.Color.LightCyan
         Me.BtnAuthenticate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAuthenticate.Font = New System.Drawing.Font("Raleway ExtraBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAuthenticate.Location = New System.Drawing.Point(361, 335)
+        Me.BtnAuthenticate.Location = New System.Drawing.Point(300, 335)
         Me.BtnAuthenticate.Name = "BtnAuthenticate"
-        Me.BtnAuthenticate.Size = New System.Drawing.Size(109, 36)
+        Me.BtnAuthenticate.Size = New System.Drawing.Size(228, 36)
         Me.BtnAuthenticate.TabIndex = 5
         Me.BtnAuthenticate.Text = "Login"
         Me.BtnAuthenticate.UseVisualStyleBackColor = False
+        '
+        'LnkSignUp
+        '
+        Me.LnkSignUp.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LnkSignUp.AutoSize = True
+        Me.LnkSignUp.BackColor = System.Drawing.Color.Transparent
+        Me.LnkSignUp.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LnkSignUp.LinkColor = System.Drawing.Color.White
+        Me.LnkSignUp.Location = New System.Drawing.Point(365, 404)
+        Me.LnkSignUp.Name = "LnkSignUp"
+        Me.LnkSignUp.Size = New System.Drawing.Size(97, 18)
+        Me.LnkSignUp.TabIndex = 6
+        Me.LnkSignUp.TabStop = True
+        Me.LnkSignUp.Text = "No account?"
+        '
+        'LblNotify
+        '
+        Me.LblNotify.BackColor = System.Drawing.Color.Transparent
+        Me.LblNotify.Font = New System.Drawing.Font("Raleway SemiBold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNotify.ForeColor = System.Drawing.Color.Red
+        Me.LblNotify.Location = New System.Drawing.Point(300, 284)
+        Me.LblNotify.Name = "LblNotify"
+        Me.LblNotify.Size = New System.Drawing.Size(228, 48)
+        Me.LblNotify.TabIndex = 7
+        Me.LblNotify.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'frmLogin
         '
@@ -99,12 +127,16 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(830, 456)
+        Me.Controls.Add(Me.LblNotify)
+        Me.Controls.Add(Me.LnkSignUp)
         Me.Controls.Add(Me.BtnAuthenticate)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TxtPassword)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.LblPassword)
         Me.Controls.Add(Me.TxtUsername)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LblUsername)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lyceum of Alabang - Bus Ticketing System"
@@ -113,10 +145,12 @@ Partial Class frmLogin
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LblUsername As Label
     Friend WithEvents TxtUsername As TextBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents LblPassword As Label
     Friend WithEvents TxtPassword As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnAuthenticate As Button
+    Friend WithEvents LnkSignUp As LinkLabel
+    Friend WithEvents LblNotify As Label
 End Class
