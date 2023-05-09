@@ -74,6 +74,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminControlData.vb" />
+    <Compile Include="Admin_Modify.vb" />
     <Compile Include="Authentication.vb" />
     <Compile Include="CheckBusData.vb" />
     <Compile Include="CollectData.vb" />
@@ -91,6 +93,12 @@
     <Compile Include="frmAddOTP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAdminControls.Designer.vb">
+      <DependentUpon>frmAdminControls.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminControls.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmChangePassword.Designer.vb">
       <DependentUpon>frmChangePassword.vb</DependentUpon>
     </Compile>
@@ -101,6 +109,12 @@
       <DependentUpon>frmDenyCancel_Reason.vb</DependentUpon>
     </Compile>
     <Compile Include="frmDenyCancel_Reason.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFirstTimeSetup.Designer.vb">
+      <DependentUpon>frmFirstTimeSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFirstTimeSetup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLCredits_CashIn.Designer.vb">
@@ -200,12 +214,6 @@
     </Compile>
     <Compile Include="Notification.vb" />
     <Compile Include="SearchEngine.vb" />
-    <Compile Include="SystemTester.Designer.vb">
-      <DependentUpon>SystemTester.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SystemTester.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -215,11 +223,17 @@
     <EmbeddedResource Include="frmAddOTP.resx">
       <DependentUpon>frmAddOTP.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminControls.resx">
+      <DependentUpon>frmAdminControls.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDenyCancel_Reason.resx">
       <DependentUpon>frmDenyCancel_Reason.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFirstTimeSetup.resx">
+      <DependentUpon>frmFirstTimeSetup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLCredits_CashIn.resx">
       <DependentUpon>frmLCredits_CashIn.vb</DependentUpon>
@@ -265,9 +279,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SystemTester.resx">
-      <DependentUpon>SystemTester.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

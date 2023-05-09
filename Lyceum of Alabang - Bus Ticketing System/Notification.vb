@@ -27,9 +27,4 @@ Public Class Notification
         Command.ExecuteNonQuery()
     End Sub
 
-    Public Shared Sub AllPassengers_Remove(niqueID As String, BusName As String, Location As String, Destination As String, TOD As String, DOD As String, Reason As String)
-
-
-    End Sub
-
 End Class

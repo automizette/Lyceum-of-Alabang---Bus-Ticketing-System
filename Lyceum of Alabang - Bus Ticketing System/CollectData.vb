@@ -575,4 +575,15 @@ Public Class CollectData
         Users.Load(DataReader)
         Return Users
     End Function
+
+    Public Shared Function UserList_Admin() As DataTable
+        Dim Users As New DataTable
+        Dim Filter As String = "Administrator"
+
+        Sql = "SELECT LRN, FirstName, LastName FROM UserAccounts WHERE NOT AccountType ='" & Filter & "'"
+        Command = New OleDbCommand(Sql, Connection)
+        DataReader = Command.ExecuteReader
+        Users.Load(DataReader)
+        Return Users
+    End Function
 End Class

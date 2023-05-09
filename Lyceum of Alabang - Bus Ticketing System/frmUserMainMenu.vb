@@ -23,9 +23,12 @@ Public Class frmUserMainMenu
         Modify.SubscribeButton_Disallow(PnlSubscribeButton, LblUniqueID_MainMenu.Text)
         Modify.ProfileBanner_Premium(LblUniqueID_MainMenu.Text)
         Modify.PremiumAccount(frmLogin.TxtUsername.Text)
+        Modify.EditPremiumStatusMessage(LblUniqueID_MainMenu.Text)
         Me.Text = "Welcome, " + LblFullName.Text + "."
 
         Modify.AutomaticApproveReservation(LblUniqueID_MainMenu.Text, LblFullName.Text, LblLRN.Text)
+
+        Modify.CheckUserSetup(LblUniqueID_MainMenu.Text)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

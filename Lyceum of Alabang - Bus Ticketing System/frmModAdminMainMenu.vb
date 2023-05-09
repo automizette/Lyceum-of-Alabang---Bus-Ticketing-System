@@ -22,6 +22,8 @@ Public Class frmModAdminMainMenu
 
         Modify.BusListDGV(DgvBusList_Admin)
 
+        Admin_Modify.CheckUserAccess_MainMenu(LblUniqueID_MainMenu.Text)
+
         Authentication.AdministratorPriveleges(LblUsername.Text, LblUniqueID_MainMenu.Text)
 
         SearchEngine.CheckLRN(TxtSearchLRN_EditUsers)
@@ -470,5 +472,9 @@ Public Class frmModAdminMainMenu
             LblActiveStatus_EditUser.Text = "N/A"
             LblActiveStatus_EditUser.ForeColor = Color.White
         End If
+    End Sub
+
+    Private Sub PbAdminSettings_Click(sender As Object, e As EventArgs) Handles PbAdminSettings.Click
+        frmAdminControls.Show()
     End Sub
 End Class

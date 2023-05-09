@@ -62,11 +62,11 @@ Partial Class frmUserNotification
         Me.DgvNotificationsMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvNotificationsMenu.Cursor = System.Windows.Forms.Cursors.Default
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(160, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CadetBlue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Azure
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(248, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(242, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(197, Byte), Integer))
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvNotificationsMenu.DefaultCellStyle = DataGridViewCellStyle2
         Me.DgvNotificationsMenu.GridColor = System.Drawing.Color.Black

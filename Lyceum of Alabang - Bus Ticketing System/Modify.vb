@@ -164,6 +164,48 @@ Public Class Modify
         End If
     End Sub
 
+    Public Shared Sub UniversalProfilPictureCheck_Admin(UniqueID As String, Pic As PictureBox)
+        Dim ImagePath As String = Application.StartupPath & "\frmUserProfilePictures\"
+        Dim UserImage As String = UniqueID & ".jpg"
+
+        If System.IO.File.Exists(ImagePath & UserImage) Then
+            Pic.Image = Image.FromFile(ImagePath & UserImage)
+        Else
+            Pic.Image = Pic.InitialImage
+        End If
+    End Sub
+
+    Public Shared Sub UniversalOpenDialog_Admin(UniqueID As String, Pb As PictureBox, Btn1 As Button, Btn2 As Button)
+        Dim OFD As New OpenFileDialog
+        Dim DuplicateImage As Image
+
+        Dim UserImage As String = UniqueID & ".jpg"
+        Dim ImagePath As String = Application.StartupPath & "\frmUserProfilePictures\"
+
+        If Btn1.Text = "Change" Then
+            With OFD
+                .CheckFileExists = True
+                .ShowReadOnly = False
+                .Filter = "JPEG files (*.jpg)|*.jpg|BMP files (*.bmp)|*.bmp|PNG files (*.png)|*.png|ALL files (*.*)|*.*"
+                .FilterIndex = 1
+
+                If .ShowDialog = DialogResult.OK Then
+                    DuplicateImage = Image.FromFile(.FileName)
+                    Pb.Image = DuplicateImage
+
+                    Btn1.BackColor = Color.IndianRed
+                    Btn1.Text = "Remove"
+                    Btn2.Visible = True
+                Else
+                    If System.IO.File.Exists(ImagePath & UserImage) Then
+                        Pb.Image = Image.FromFile(ImagePath & UserImage)
+                    End If
+                    .Dispose()
+                End If
+            End With
+        End If
+    End Sub
+
     Public Shared Sub SubscribeButton_Disallow(Panel As Panel, UniqueID As String)
         Sql = "SELECT IsPremium FROM UserSettings WHERE UniqueID ='" & UniqueID & "'"
         Command = New OleDbCommand(Sql, Connection)
@@ -172,7 +214,8 @@ Public Class Modify
         While DataReader.Read
             If DataReader("IsPremium") = False Then
                 Panel.Visible = True
-                CollectData.EditUserPremium_ToPending(frmUserMainMenu.LblUniqueID_MainMenu.Text, False)
+                'CollectData.EditUserPremium_ToPending(frmUserMainMenu.LblUniqueID_MainMenu.Text, True)
+
             Else
                 Panel.Visible = False
             End If
@@ -198,6 +241,14 @@ Public Class Modify
         DGV.Columns(1).HeaderText = "User's first name"
     End Sub
 
+    Public Shared Sub LCreditCodesCensored(DGV As DataGridViewCellFormattingEventArgs)
+        If DGV.ColumnIndex = 0 Then
+            If DGV.Value IsNot Nothing Then
+                DGV.Value = New String("*", DGV.Value.ToString().Length)
+            End If
+        End If
+    End Sub
+
     Public Shared Sub BookList_UserFiltered(DGV As DataGridView)
         DGV.Columns(0).HeaderText = "Name"
         DGV.Columns(1).HeaderText = "Seat Code"
@@ -206,7 +257,7 @@ Public Class Modify
         DGV.Columns(4).HeaderText = "Date of Departure"
     End Sub
     Public Shared Sub EditPremiumStatusMessage(UniqueID As String)
-        Sql = "SELECT IsPremium, IsPremiumPending FROM UserSettings WHERE UniqueID ='" & UniqueID & "'"
+        Sql = "SELECT IsPremiumPending FROM UserSettings WHERE UniqueID ='" & UniqueID & "'"
         Command = New OleDbCommand(Sql, Connection)
         DataReader = Command.ExecuteReader
 
@@ -377,6 +428,24 @@ Public Class Modify
                 frmUserMainMenu.PnlLCredits_Account.Visible = False
             End If
         End If
+    End Sub
+
+    Public Shared Sub CheckUserSetup(UniqueID As String)
+        Sql = "SELECT IsAccountNew FROM UserSettings WHERE UniqueID ='" & UniqueID & "'"
+        Command = New OleDbCommand(Sql, Connection)
+        DataReader = Command.ExecuteReader
+
+        While DataReader.Read
+            If DataReader("IsAccountNew") = True Then
+                frmFirstTimeSetup.Show()
+
+                Sql = "UPDATE UserSettings SET IsAccountNew =" & False & " WHERE UniqueID ='" & UniqueID & "'"
+                Command = New OleDbCommand(Sql, Connection)
+                Command.ExecuteNonQuery()
+            Else
+                'Nothing
+            End If
+        End While
     End Sub
 
 End Class

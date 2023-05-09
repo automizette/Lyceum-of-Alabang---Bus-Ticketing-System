@@ -24,14 +24,14 @@ Partial Class frmModAdminMainMenu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmModAdminMainMenu))
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PbInformationDesk = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TbModAdminCenter = New System.Windows.Forms.TabControl()
@@ -137,10 +137,27 @@ Partial Class frmModAdminMainMenu
         Me.Label26 = New System.Windows.Forms.Label()
         Me.DgvBusList_Editing = New System.Windows.Forms.DataGridView()
         Me.TbEditUsers = New System.Windows.Forms.TabPage()
+        Me.BtnDeactivateUser = New System.Windows.Forms.Button()
+        Me.BtnActivateUser = New System.Windows.Forms.Button()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.TxtSearchLRN_EditUsers = New System.Windows.Forms.TextBox()
         Me.DgvUserList = New System.Windows.Forms.DataGridView()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.LblActiveStatus_EditUser = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.LblAccType_EditUser = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.LblBDay_EditUser = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.LblEmail_EditUser = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.LblUsername_EditUser = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.LblUniqueID_EditUser = New System.Windows.Forms.Label()
+        Me.LblLRN_EditUser = New System.Windows.Forms.Label()
+        Me.LblFirstName_EditUser = New System.Windows.Forms.Label()
+        Me.PbProfilePicture = New System.Windows.Forms.PictureBox()
+        Me.LblLastName_EditUser = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblFullName = New System.Windows.Forms.Label()
         Me.PbBook = New System.Windows.Forms.PictureBox()
@@ -154,23 +171,6 @@ Partial Class frmModAdminMainMenu
         Me.PbEditUser = New System.Windows.Forms.PictureBox()
         Me.PbEditBus = New System.Windows.Forms.PictureBox()
         Me.PbAdminSettings = New System.Windows.Forms.PictureBox()
-        Me.LblLastName_EditUser = New System.Windows.Forms.Label()
-        Me.PbProfilePicture = New System.Windows.Forms.PictureBox()
-        Me.LblFirstName_EditUser = New System.Windows.Forms.Label()
-        Me.LblLRN_EditUser = New System.Windows.Forms.Label()
-        Me.LblUniqueID_EditUser = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.LblUsername_EditUser = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.LblEmail_EditUser = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.LblBDay_EditUser = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.LblAccType_EditUser = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.LblActiveStatus_EditUser = New System.Windows.Forms.Label()
-        Me.BtnActivateUser = New System.Windows.Forms.Button()
-        Me.BtnDeactivateUser = New System.Windows.Forms.Button()
         CType(Me.PbInformationDesk, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.TbModAdminCenter.SuspendLayout()
@@ -196,12 +196,12 @@ Partial Class frmModAdminMainMenu
         Me.TbEditUsers.SuspendLayout()
         CType(Me.DgvUserList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
+        CType(Me.PbProfilePicture, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbBook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbEditReservations, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbEditUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbEditBus, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbAdminSettings, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbProfilePicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PbInformationDesk
@@ -894,22 +894,22 @@ Partial Class frmModAdminMainMenu
         Me.DgvBusList_Admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvBusList_Admin.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvBusList_Admin.BackgroundColor = System.Drawing.Color.CornflowerBlue
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black
-        Me.DgvBusList_Admin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        Me.DgvBusList_Admin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvBusList_Admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.LightSteelBlue
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvBusList_Admin.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvBusList_Admin.DefaultCellStyle = DataGridViewCellStyle2
         Me.DgvBusList_Admin.Location = New System.Drawing.Point(8, 31)
         Me.DgvBusList_Admin.MultiSelect = False
         Me.DgvBusList_Admin.Name = "DgvBusList_Admin"
@@ -1206,23 +1206,23 @@ Partial Class frmModAdminMainMenu
         Me.DgvBookReservations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvBookReservations.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvBookReservations.BackgroundColor = System.Drawing.Color.LightSkyBlue
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.LightSkyBlue
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.CornflowerBlue
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvBookReservations.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CornflowerBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvBookReservations.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DgvBookReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.CornflowerBlue
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Turquoise
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvBookReservations.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(158, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(253, Byte), Integer))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(253, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(158, Byte), Integer))
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvBookReservations.DefaultCellStyle = DataGridViewCellStyle4
         Me.DgvBookReservations.Location = New System.Drawing.Point(6, 6)
         Me.DgvBookReservations.MultiSelect = False
         Me.DgvBookReservations.Name = "DgvBookReservations"
@@ -1500,22 +1500,22 @@ Partial Class frmModAdminMainMenu
         Me.DgvBusList_Editing.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvBusList_Editing.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvBusList_Editing.BackgroundColor = System.Drawing.Color.CornflowerBlue
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black
-        Me.DgvBusList_Editing.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
+        Me.DgvBusList_Editing.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DgvBusList_Editing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.LightSteelBlue
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvBusList_Editing.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSteelBlue
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvBusList_Editing.DefaultCellStyle = DataGridViewCellStyle6
         Me.DgvBusList_Editing.Location = New System.Drawing.Point(6, 49)
         Me.DgvBusList_Editing.MultiSelect = False
         Me.DgvBusList_Editing.Name = "DgvBusList_Editing"
@@ -1540,6 +1540,32 @@ Partial Class frmModAdminMainMenu
         Me.TbEditUsers.TabIndex = 4
         Me.TbEditUsers.Text = "Edit Users"
         Me.TbEditUsers.UseVisualStyleBackColor = True
+        '
+        'BtnDeactivateUser
+        '
+        Me.BtnDeactivateUser.BackColor = System.Drawing.Color.Crimson
+        Me.BtnDeactivateUser.Enabled = False
+        Me.BtnDeactivateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDeactivateUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDeactivateUser.Location = New System.Drawing.Point(697, 392)
+        Me.BtnDeactivateUser.Name = "BtnDeactivateUser"
+        Me.BtnDeactivateUser.Size = New System.Drawing.Size(194, 57)
+        Me.BtnDeactivateUser.TabIndex = 5
+        Me.BtnDeactivateUser.Text = "Deactivate"
+        Me.BtnDeactivateUser.UseVisualStyleBackColor = False
+        '
+        'BtnActivateUser
+        '
+        Me.BtnActivateUser.BackColor = System.Drawing.Color.PaleGreen
+        Me.BtnActivateUser.Enabled = False
+        Me.BtnActivateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnActivateUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnActivateUser.Location = New System.Drawing.Point(496, 392)
+        Me.BtnActivateUser.Name = "BtnActivateUser"
+        Me.BtnActivateUser.Size = New System.Drawing.Size(190, 57)
+        Me.BtnActivateUser.TabIndex = 4
+        Me.BtnActivateUser.Text = "Activate"
+        Me.BtnActivateUser.UseVisualStyleBackColor = False
         '
         'Label30
         '
@@ -1567,22 +1593,22 @@ Partial Class frmModAdminMainMenu
         Me.DgvUserList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvUserList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvUserList.BackgroundColor = System.Drawing.Color.CornflowerBlue
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black
-        Me.DgvUserList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        Me.DgvUserList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DgvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.LightSkyBlue
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Aquamarine
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.DarkSlateGray
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvUserList.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(231, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(254, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(249, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(164, Byte), Integer))
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvUserList.DefaultCellStyle = DataGridViewCellStyle8
         Me.DgvUserList.GridColor = System.Drawing.Color.Black
         Me.DgvUserList.Location = New System.Drawing.Point(8, 43)
         Me.DgvUserList.MultiSelect = False
@@ -1617,6 +1643,170 @@ Partial Class frmModAdminMainMenu
         Me.GroupBox5.TabIndex = 0
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "User's Information"
+        '
+        'LblActiveStatus_EditUser
+        '
+        Me.LblActiveStatus_EditUser.AutoSize = True
+        Me.LblActiveStatus_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblActiveStatus_EditUser.ForeColor = System.Drawing.Color.White
+        Me.LblActiveStatus_EditUser.Location = New System.Drawing.Point(209, 160)
+        Me.LblActiveStatus_EditUser.Name = "LblActiveStatus_EditUser"
+        Me.LblActiveStatus_EditUser.Size = New System.Drawing.Size(42, 19)
+        Me.LblActiveStatus_EditUser.TabIndex = 18
+        Me.LblActiveStatus_EditUser.Text = "N/A"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.ForeColor = System.Drawing.Color.White
+        Me.Label34.Location = New System.Drawing.Point(210, 143)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(63, 15)
+        Me.Label34.TabIndex = 17
+        Me.Label34.Text = "Active(?):"
+        '
+        'LblAccType_EditUser
+        '
+        Me.LblAccType_EditUser.AutoSize = True
+        Me.LblAccType_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAccType_EditUser.ForeColor = System.Drawing.Color.White
+        Me.LblAccType_EditUser.Location = New System.Drawing.Point(209, 299)
+        Me.LblAccType_EditUser.Name = "LblAccType_EditUser"
+        Me.LblAccType_EditUser.Size = New System.Drawing.Size(34, 19)
+        Me.LblAccType_EditUser.TabIndex = 16
+        Me.LblAccType_EditUser.Text = "///"
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.ForeColor = System.Drawing.Color.White
+        Me.Label47.Location = New System.Drawing.Point(210, 281)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(95, 15)
+        Me.Label47.TabIndex = 15
+        Me.Label47.Text = "Account Type:"
+        '
+        'LblBDay_EditUser
+        '
+        Me.LblBDay_EditUser.AutoSize = True
+        Me.LblBDay_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBDay_EditUser.ForeColor = System.Drawing.Color.White
+        Me.LblBDay_EditUser.Location = New System.Drawing.Point(11, 298)
+        Me.LblBDay_EditUser.Name = "LblBDay_EditUser"
+        Me.LblBDay_EditUser.Size = New System.Drawing.Size(125, 19)
+        Me.LblBDay_EditUser.TabIndex = 14
+        Me.LblBDay_EditUser.Text = "MM/DD/YYYY"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.ForeColor = System.Drawing.Color.White
+        Me.Label45.Location = New System.Drawing.Point(13, 281)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(68, 15)
+        Me.Label45.TabIndex = 13
+        Me.Label45.Text = "Birthdate:"
+        '
+        'LblEmail_EditUser
+        '
+        Me.LblEmail_EditUser.AutoSize = True
+        Me.LblEmail_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEmail_EditUser.ForeColor = System.Drawing.Color.White
+        Me.LblEmail_EditUser.Location = New System.Drawing.Point(12, 227)
+        Me.LblEmail_EditUser.Name = "LblEmail_EditUser"
+        Me.LblEmail_EditUser.Size = New System.Drawing.Size(52, 19)
+        Me.LblEmail_EditUser.TabIndex = 12
+        Me.LblEmail_EditUser.Text = "Email"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.ForeColor = System.Drawing.Color.White
+        Me.Label43.Location = New System.Drawing.Point(13, 210)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(44, 15)
+        Me.Label43.TabIndex = 11
+        Me.Label43.Text = "Email:"
+        '
+        'LblUsername_EditUser
+        '
+        Me.LblUsername_EditUser.AutoSize = True
+        Me.LblUsername_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsername_EditUser.ForeColor = System.Drawing.Color.White
+        Me.LblUsername_EditUser.Location = New System.Drawing.Point(12, 160)
+        Me.LblUsername_EditUser.Name = "LblUsername_EditUser"
+        Me.LblUsername_EditUser.Size = New System.Drawing.Size(89, 19)
+        Me.LblUsername_EditUser.TabIndex = 10
+        Me.LblUsername_EditUser.Text = "Username"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.ForeColor = System.Drawing.Color.White
+        Me.Label41.Location = New System.Drawing.Point(13, 143)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(74, 15)
+        Me.Label41.TabIndex = 9
+        Me.Label41.Text = "Username:"
+        '
+        'LblUniqueID_EditUser
+        '
+        Me.LblUniqueID_EditUser.AutoSize = True
+        Me.LblUniqueID_EditUser.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUniqueID_EditUser.ForeColor = System.Drawing.Color.White
+        Me.LblUniqueID_EditUser.Location = New System.Drawing.Point(134, 113)
+        Me.LblUniqueID_EditUser.Name = "LblUniqueID_EditUser"
+        Me.LblUniqueID_EditUser.Size = New System.Drawing.Size(86, 15)
+        Me.LblUniqueID_EditUser.TabIndex = 8
+        Me.LblUniqueID_EditUser.Text = "LOA-XXXXXX"
+        '
+        'LblLRN_EditUser
+        '
+        Me.LblLRN_EditUser.AutoSize = True
+        Me.LblLRN_EditUser.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLRN_EditUser.ForeColor = System.Drawing.Color.White
+        Me.LblLRN_EditUser.Location = New System.Drawing.Point(133, 93)
+        Me.LblLRN_EditUser.Name = "LblLRN_EditUser"
+        Me.LblLRN_EditUser.Size = New System.Drawing.Size(103, 15)
+        Me.LblLRN_EditUser.TabIndex = 7
+        Me.LblLRN_EditUser.Text = "000000000000"
+        '
+        'LblFirstName_EditUser
+        '
+        Me.LblFirstName_EditUser.AutoSize = True
+        Me.LblFirstName_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFirstName_EditUser.ForeColor = System.Drawing.Color.White
+        Me.LblFirstName_EditUser.Location = New System.Drawing.Point(133, 65)
+        Me.LblFirstName_EditUser.Name = "LblFirstName_EditUser"
+        Me.LblFirstName_EditUser.Size = New System.Drawing.Size(92, 19)
+        Me.LblFirstName_EditUser.TabIndex = 6
+        Me.LblFirstName_EditUser.Text = "First Name"
+        '
+        'PbProfilePicture
+        '
+        Me.PbProfilePicture.InitialImage = CType(resources.GetObject("PbProfilePicture.InitialImage"), System.Drawing.Image)
+        Me.PbProfilePicture.Location = New System.Drawing.Point(15, 24)
+        Me.PbProfilePicture.Name = "PbProfilePicture"
+        Me.PbProfilePicture.Size = New System.Drawing.Size(112, 112)
+        Me.PbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbProfilePicture.TabIndex = 5
+        Me.PbProfilePicture.TabStop = False
+        '
+        'LblLastName_EditUser
+        '
+        Me.LblLastName_EditUser.AutoSize = True
+        Me.LblLastName_EditUser.Font = New System.Drawing.Font("Raleway Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLastName_EditUser.ForeColor = System.Drawing.Color.White
+        Me.LblLastName_EditUser.Location = New System.Drawing.Point(133, 37)
+        Me.LblLastName_EditUser.Name = "LblLastName_EditUser"
+        Me.LblLastName_EditUser.Size = New System.Drawing.Size(124, 25)
+        Me.LblLastName_EditUser.TabIndex = 4
+        Me.LblLastName_EditUser.Text = "Last Name"
         '
         'Label1
         '
@@ -1732,7 +1922,9 @@ Partial Class frmModAdminMainMenu
         'PbEditUser
         '
         Me.PbEditUser.BackColor = System.Drawing.Color.Transparent
+        Me.PbEditUser.Enabled = False
         Me.PbEditUser.Image = CType(resources.GetObject("PbEditUser.Image"), System.Drawing.Image)
+        Me.PbEditUser.InitialImage = CType(resources.GetObject("PbEditUser.InitialImage"), System.Drawing.Image)
         Me.PbEditUser.Location = New System.Drawing.Point(21, 439)
         Me.PbEditUser.Name = "PbEditUser"
         Me.PbEditUser.Size = New System.Drawing.Size(34, 36)
@@ -1755,203 +1947,13 @@ Partial Class frmModAdminMainMenu
         '
         Me.PbAdminSettings.BackColor = System.Drawing.Color.Transparent
         Me.PbAdminSettings.Image = CType(resources.GetObject("PbAdminSettings.Image"), System.Drawing.Image)
-        Me.PbAdminSettings.Location = New System.Drawing.Point(17, 508)
+        Me.PbAdminSettings.Location = New System.Drawing.Point(17, 569)
         Me.PbAdminSettings.Name = "PbAdminSettings"
         Me.PbAdminSettings.Size = New System.Drawing.Size(41, 52)
         Me.PbAdminSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PbAdminSettings.TabIndex = 17
         Me.PbAdminSettings.TabStop = False
         Me.PbAdminSettings.Visible = False
-        '
-        'LblLastName_EditUser
-        '
-        Me.LblLastName_EditUser.AutoSize = True
-        Me.LblLastName_EditUser.Font = New System.Drawing.Font("Raleway Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLastName_EditUser.ForeColor = System.Drawing.Color.White
-        Me.LblLastName_EditUser.Location = New System.Drawing.Point(133, 37)
-        Me.LblLastName_EditUser.Name = "LblLastName_EditUser"
-        Me.LblLastName_EditUser.Size = New System.Drawing.Size(124, 25)
-        Me.LblLastName_EditUser.TabIndex = 4
-        Me.LblLastName_EditUser.Text = "Last Name"
-        '
-        'PbProfilePicture
-        '
-        Me.PbProfilePicture.InitialImage = CType(resources.GetObject("PbProfilePicture.InitialImage"), System.Drawing.Image)
-        Me.PbProfilePicture.Location = New System.Drawing.Point(15, 24)
-        Me.PbProfilePicture.Name = "PbProfilePicture"
-        Me.PbProfilePicture.Size = New System.Drawing.Size(112, 112)
-        Me.PbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbProfilePicture.TabIndex = 5
-        Me.PbProfilePicture.TabStop = False
-        '
-        'LblFirstName_EditUser
-        '
-        Me.LblFirstName_EditUser.AutoSize = True
-        Me.LblFirstName_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFirstName_EditUser.ForeColor = System.Drawing.Color.White
-        Me.LblFirstName_EditUser.Location = New System.Drawing.Point(133, 65)
-        Me.LblFirstName_EditUser.Name = "LblFirstName_EditUser"
-        Me.LblFirstName_EditUser.Size = New System.Drawing.Size(92, 19)
-        Me.LblFirstName_EditUser.TabIndex = 6
-        Me.LblFirstName_EditUser.Text = "First Name"
-        '
-        'LblLRN_EditUser
-        '
-        Me.LblLRN_EditUser.AutoSize = True
-        Me.LblLRN_EditUser.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLRN_EditUser.ForeColor = System.Drawing.Color.White
-        Me.LblLRN_EditUser.Location = New System.Drawing.Point(133, 93)
-        Me.LblLRN_EditUser.Name = "LblLRN_EditUser"
-        Me.LblLRN_EditUser.Size = New System.Drawing.Size(103, 15)
-        Me.LblLRN_EditUser.TabIndex = 7
-        Me.LblLRN_EditUser.Text = "000000000000"
-        '
-        'LblUniqueID_EditUser
-        '
-        Me.LblUniqueID_EditUser.AutoSize = True
-        Me.LblUniqueID_EditUser.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUniqueID_EditUser.ForeColor = System.Drawing.Color.White
-        Me.LblUniqueID_EditUser.Location = New System.Drawing.Point(134, 113)
-        Me.LblUniqueID_EditUser.Name = "LblUniqueID_EditUser"
-        Me.LblUniqueID_EditUser.Size = New System.Drawing.Size(86, 15)
-        Me.LblUniqueID_EditUser.TabIndex = 8
-        Me.LblUniqueID_EditUser.Text = "LOA-XXXXXX"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.ForeColor = System.Drawing.Color.White
-        Me.Label41.Location = New System.Drawing.Point(13, 143)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(74, 15)
-        Me.Label41.TabIndex = 9
-        Me.Label41.Text = "Username:"
-        '
-        'LblUsername_EditUser
-        '
-        Me.LblUsername_EditUser.AutoSize = True
-        Me.LblUsername_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUsername_EditUser.ForeColor = System.Drawing.Color.White
-        Me.LblUsername_EditUser.Location = New System.Drawing.Point(12, 160)
-        Me.LblUsername_EditUser.Name = "LblUsername_EditUser"
-        Me.LblUsername_EditUser.Size = New System.Drawing.Size(89, 19)
-        Me.LblUsername_EditUser.TabIndex = 10
-        Me.LblUsername_EditUser.Text = "Username"
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.ForeColor = System.Drawing.Color.White
-        Me.Label43.Location = New System.Drawing.Point(13, 210)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(44, 15)
-        Me.Label43.TabIndex = 11
-        Me.Label43.Text = "Email:"
-        '
-        'LblEmail_EditUser
-        '
-        Me.LblEmail_EditUser.AutoSize = True
-        Me.LblEmail_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEmail_EditUser.ForeColor = System.Drawing.Color.White
-        Me.LblEmail_EditUser.Location = New System.Drawing.Point(12, 227)
-        Me.LblEmail_EditUser.Name = "LblEmail_EditUser"
-        Me.LblEmail_EditUser.Size = New System.Drawing.Size(52, 19)
-        Me.LblEmail_EditUser.TabIndex = 12
-        Me.LblEmail_EditUser.Text = "Email"
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.ForeColor = System.Drawing.Color.White
-        Me.Label45.Location = New System.Drawing.Point(13, 281)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(68, 15)
-        Me.Label45.TabIndex = 13
-        Me.Label45.Text = "Birthdate:"
-        '
-        'LblBDay_EditUser
-        '
-        Me.LblBDay_EditUser.AutoSize = True
-        Me.LblBDay_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBDay_EditUser.ForeColor = System.Drawing.Color.White
-        Me.LblBDay_EditUser.Location = New System.Drawing.Point(11, 298)
-        Me.LblBDay_EditUser.Name = "LblBDay_EditUser"
-        Me.LblBDay_EditUser.Size = New System.Drawing.Size(125, 19)
-        Me.LblBDay_EditUser.TabIndex = 14
-        Me.LblBDay_EditUser.Text = "MM/DD/YYYY"
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.ForeColor = System.Drawing.Color.White
-        Me.Label47.Location = New System.Drawing.Point(210, 281)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(95, 15)
-        Me.Label47.TabIndex = 15
-        Me.Label47.Text = "Account Type:"
-        '
-        'LblAccType_EditUser
-        '
-        Me.LblAccType_EditUser.AutoSize = True
-        Me.LblAccType_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAccType_EditUser.ForeColor = System.Drawing.Color.White
-        Me.LblAccType_EditUser.Location = New System.Drawing.Point(209, 299)
-        Me.LblAccType_EditUser.Name = "LblAccType_EditUser"
-        Me.LblAccType_EditUser.Size = New System.Drawing.Size(34, 19)
-        Me.LblAccType_EditUser.TabIndex = 16
-        Me.LblAccType_EditUser.Text = "///"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.ForeColor = System.Drawing.Color.White
-        Me.Label34.Location = New System.Drawing.Point(210, 143)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(63, 15)
-        Me.Label34.TabIndex = 17
-        Me.Label34.Text = "Active(?):"
-        '
-        'LblActiveStatus_EditUser
-        '
-        Me.LblActiveStatus_EditUser.AutoSize = True
-        Me.LblActiveStatus_EditUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblActiveStatus_EditUser.ForeColor = System.Drawing.Color.White
-        Me.LblActiveStatus_EditUser.Location = New System.Drawing.Point(209, 160)
-        Me.LblActiveStatus_EditUser.Name = "LblActiveStatus_EditUser"
-        Me.LblActiveStatus_EditUser.Size = New System.Drawing.Size(42, 19)
-        Me.LblActiveStatus_EditUser.TabIndex = 18
-        Me.LblActiveStatus_EditUser.Text = "N/A"
-        '
-        'BtnActivateUser
-        '
-        Me.BtnActivateUser.BackColor = System.Drawing.Color.PaleGreen
-        Me.BtnActivateUser.Enabled = False
-        Me.BtnActivateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnActivateUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnActivateUser.Location = New System.Drawing.Point(496, 392)
-        Me.BtnActivateUser.Name = "BtnActivateUser"
-        Me.BtnActivateUser.Size = New System.Drawing.Size(190, 57)
-        Me.BtnActivateUser.TabIndex = 4
-        Me.BtnActivateUser.Text = "Activate"
-        Me.BtnActivateUser.UseVisualStyleBackColor = False
-        '
-        'BtnDeactivateUser
-        '
-        Me.BtnDeactivateUser.BackColor = System.Drawing.Color.Crimson
-        Me.BtnDeactivateUser.Enabled = False
-        Me.BtnDeactivateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDeactivateUser.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDeactivateUser.Location = New System.Drawing.Point(697, 392)
-        Me.BtnDeactivateUser.Name = "BtnDeactivateUser"
-        Me.BtnDeactivateUser.Size = New System.Drawing.Size(194, 57)
-        Me.BtnDeactivateUser.TabIndex = 5
-        Me.BtnDeactivateUser.Text = "Deactivate"
-        Me.BtnDeactivateUser.UseVisualStyleBackColor = False
         '
         'frmModAdminMainMenu
         '
@@ -2015,12 +2017,12 @@ Partial Class frmModAdminMainMenu
         CType(Me.DgvUserList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        CType(Me.PbProfilePicture, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbBook, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbEditReservations, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbEditUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbEditBus, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbAdminSettings, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbProfilePicture, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
