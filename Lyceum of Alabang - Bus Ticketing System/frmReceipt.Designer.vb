@@ -260,7 +260,7 @@ Partial Class FrmReceipt
         Me.LblPointA.AutoSize = True
         Me.LblPointA.BackColor = System.Drawing.Color.Transparent
         Me.LblPointA.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPointA.Location = New System.Drawing.Point(81, 198)
+        Me.LblPointA.Location = New System.Drawing.Point(81, 203)
         Me.LblPointA.Name = "LblPointA"
         Me.LblPointA.Size = New System.Drawing.Size(60, 15)
         Me.LblPointA.TabIndex = 18
@@ -270,9 +270,9 @@ Partial Class FrmReceipt
         '
         Me.LblPointB.BackColor = System.Drawing.Color.Transparent
         Me.LblPointB.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPointB.Location = New System.Drawing.Point(160, 198)
+        Me.LblPointB.Location = New System.Drawing.Point(147, 202)
         Me.LblPointB.Name = "LblPointB"
-        Me.LblPointB.Size = New System.Drawing.Size(125, 19)
+        Me.LblPointB.Size = New System.Drawing.Size(137, 24)
         Me.LblPointB.TabIndex = 19
         Me.LblPointB.Text = "POINT-B"
         Me.LblPointB.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -349,7 +349,6 @@ Partial Class FrmReceipt
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.LnkPrintReceipt)
         Me.Controls.Add(Me.LblDOT)
-        Me.Controls.Add(Me.LblPointB)
         Me.Controls.Add(Me.LblPointA)
         Me.Controls.Add(Me.LblTransactionID)
         Me.Controls.Add(Me.Label14)
@@ -369,6 +368,7 @@ Partial Class FrmReceipt
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LblSeatCode_R2)
         Me.Controls.Add(Me.LblSeatCode_R3)
+        Me.Controls.Add(Me.LblPointB)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False

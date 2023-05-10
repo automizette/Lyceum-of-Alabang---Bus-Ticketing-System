@@ -38,8 +38,18 @@ Public Class Authentication
                         FrmReceipt.UniqueID = frmUserMainMenu.LblUniqueID_MainMenu
                         CollectData.BookingImportingValidation_UniqueID = DataReader("UniqueID")
 
-                        frmUserMainMenu.Show()
-                        frmLogin.Hide()
+                        Sql = "SELECT * FROM SystemSettings"
+                        Command = New OleDbCommand(Sql, Connection)
+                        DataReader = Command.ExecuteReader
+
+                        While DataReader.Read
+                            If DataReader("IsMaintenanceModeForUsersOnly") = True Then
+                                MessageBox.Show("Lyceum of Alabang - Bus Ticketing System is currently undergoing maintenance. We ask for you kind patient as we try our best to improve your experience. Thank you!", "Maintenance", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+                            Else
+                                frmUserMainMenu.Show()
+                                frmLogin.Hide()
+                            End If
+                        End While
                     Case "Moderator"
                         MessageBox.Show("Login Authentication Success! Welcome, " + DataReader("FirstName") + ".", "Login (Moderator) success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                         frmModAdminMainMenu.LblFullName.Text = DataReader("FirstName") + " " + DataReader("LastName")
@@ -49,6 +59,13 @@ Public Class Authentication
                         frmModAdminMainMenu.LblUniqueID_AboutYou.Text = DataReader("UniqueID")
                         frmModAdminMainMenu.LblUniqueID_MainMenu.Text = DataReader("UniqueID")
                         frmModAdminMainMenu.LblAccountType.Text = DataReader("AccountType")
+
+                        frmModAdminMainMenu.LblFullName_AccInfo.Text = DataReader("FullName")
+                        frmModAdminMainMenu.LblUsername_AccInfo.Text = DataReader("Username")
+                        frmModAdminMainMenu.LblUniqueID_AccInfo.Text = DataReader("UniqueID")
+                        frmModAdminMainMenu.LblLRN_AccInfo.Text = DataReader("LRN")
+                        frmModAdminMainMenu.TxtEmail_Account.Text = DataReader("EmailAddress")
+                        frmModAdminMainMenu.TxtUsername_Account.Text = DataReader("Username")
 
                         frmSeatPicker.AccountType_FilteredSeatin = frmModAdminMainMenu.LblPlateNumber
                         frmSeatPicker.BookButton_Filtered = frmModAdminMainMenu.BtnBookNow
@@ -70,6 +87,14 @@ Public Class Authentication
                         frmModAdminMainMenu.LblUniqueID_AboutYou.Text = DataReader("UniqueID")
                         frmModAdminMainMenu.LblUniqueID_MainMenu.Text = DataReader("UniqueID")
                         frmModAdminMainMenu.LblAccountType.Text = DataReader("AccountType")
+
+                        frmModAdminMainMenu.LblFullName_AccInfo.Text = DataReader("FirstName") + " " + DataReader("LastName")
+                        frmModAdminMainMenu.LblUsername_AccInfo.Text = DataReader("Username")
+                        frmModAdminMainMenu.LblUniqueID_AccInfo.Text = DataReader("UniqueID")
+                        frmModAdminMainMenu.LblLRN_AccInfo.Text = DataReader("LRN")
+                        frmModAdminMainMenu.TxtEmail_Account.Text = DataReader("EmailAddress")
+                        frmModAdminMainMenu.TxtUsername_Account.Text = DataReader("Username")
+                        frmModAdminMainMenu.LblAccountType_Account.Text = DataReader("AccountType")
 
                         frmSeatPicker.AccountType_FilteredSeatin = frmModAdminMainMenu.LblPlateNumber
                         frmSeatPicker.BookButton_Filtered = frmModAdminMainMenu.BtnBookNow
@@ -255,7 +280,8 @@ Public Class Authentication
     End Sub
 
     Public Shared Sub CreateUserPriveleges(UniqueID As String, Username As String)
-        Sql = "INSERT INTO UserSettings([UniqueID],[Username])VALUES('" & UniqueID & "','" & Username & "')"
+        Dim FullName As String = frmSignUp.LblFirstName.Text + " " + frmSignUp.LblLastName.Text
+        Sql = "INSERT INTO UserSettings([UniqueID],[Username],[FullName])VALUES('" & UniqueID & "','" & Username & "','" & FullName & "')"
         Command = New OleDbCommand(Sql, Connection)
         Command.ExecuteNonQuery()
     End Sub

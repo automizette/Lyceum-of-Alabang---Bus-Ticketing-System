@@ -93,16 +93,46 @@
     <Compile Include="frmAddOTP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAddOTP_Admin.Designer.vb">
+      <DependentUpon>frmAddOTP_Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddOTP_Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAdminControls.Designer.vb">
       <DependentUpon>frmAdminControls.vb</DependentUpon>
     </Compile>
     <Compile Include="frmAdminControls.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBookingSystemKios.Designer.vb">
+      <DependentUpon>frmBookingSystemKios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookingSystemKios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmChangePassword.Designer.vb">
       <DependentUpon>frmChangePassword.vb</DependentUpon>
     </Compile>
     <Compile Include="frmChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword_Admin.Designer.vb">
+      <DependentUpon>frmChangePassword_Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword_Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckFeedback.Designer.vb">
+      <DependentUpon>frmCheckFeedback.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckFeedback.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmKioskMode.Designer.vb">
+      <DependentUpon>frmConfirmKioskMode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirmKioskMode.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDenyCancel_Reason.Designer.vb">
@@ -139,6 +169,12 @@
       <DependentUpon>frmOTPValidation.vb</DependentUpon>
     </Compile>
     <Compile Include="frmOTPValidation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOTPValidation_Admin.Designer.vb">
+      <DependentUpon>frmOTPValidation_Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOTPValidation_Admin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPayment_Subscribe.Designer.vb">
@@ -183,6 +219,18 @@
     <Compile Include="frmTransactionHistory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmTransactionHistory_Admin.Designer.vb">
+      <DependentUpon>frmTransactionHistory_Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransactionHistory_Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserArrivalSystem.Designer.vb">
+      <DependentUpon>frmUserArrivalSystem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserArrivalSystem.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmUserMainMenu.Designer.vb">
       <DependentUpon>frmUserMainMenu.vb</DependentUpon>
     </Compile>
@@ -214,6 +262,7 @@
     </Compile>
     <Compile Include="Notification.vb" />
     <Compile Include="SearchEngine.vb" />
+    <Compile Include="Tutorial.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -223,11 +272,26 @@
     <EmbeddedResource Include="frmAddOTP.resx">
       <DependentUpon>frmAddOTP.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOTP_Admin.resx">
+      <DependentUpon>frmAddOTP_Admin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminControls.resx">
       <DependentUpon>frmAdminControls.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBookingSystemKios.resx">
+      <DependentUpon>frmBookingSystemKios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword_Admin.resx">
+      <DependentUpon>frmChangePassword_Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckFeedback.resx">
+      <DependentUpon>frmCheckFeedback.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmKioskMode.resx">
+      <DependentUpon>frmConfirmKioskMode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDenyCancel_Reason.resx">
       <DependentUpon>frmDenyCancel_Reason.vb</DependentUpon>
@@ -246,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOTPValidation.resx">
       <DependentUpon>frmOTPValidation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOTPValidation_Admin.resx">
+      <DependentUpon>frmOTPValidation_Admin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPayment_Subscribe.resx">
       <DependentUpon>frmPayment_Subscribe.vb</DependentUpon>
@@ -267,6 +334,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTransactionHistory.resx">
       <DependentUpon>frmTransactionHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransactionHistory_Admin.resx">
+      <DependentUpon>frmTransactionHistory_Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserArrivalSystem.resx">
+      <DependentUpon>frmUserArrivalSystem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserMainMenu.resx">
       <DependentUpon>frmUserMainMenu.vb</DependentUpon>
@@ -292,6 +365,35 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

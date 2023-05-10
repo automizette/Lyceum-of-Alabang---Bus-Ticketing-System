@@ -10,7 +10,7 @@
         ElseIf Me.Tag.ToString = "PURCHASED_FOR_SOMEONE" Then
             CollectData.FromReceipt_Import(LblTransactionID.Text, LblUniqueID.Text, UniqueID.Text, LblFullName.Text, LblBusName.Text, LblPlateNumber.Text, LblPointA.Text, LblPointB.Text, LblPrice.Text, LblTime.Text, LblDate.Text, LblDOT.Text, 2)
         ElseIf Me.Tag.ToString = "PURCHASED_BY_ADMINISTRATOR" Then
-            CollectData.FromReceipt_Import(LblTransactionID.Text, LblUniqueID.Text, UniqueID.Text, LblFullName.Text, LblBusName.Text, LblPlateNumber.Text, LblPointA.Text, LblPointB.Text, LblPrice.Text, LblTime.Text, LblDate.Text, LblDOT.Text, 2)
+            CollectData.FromReceipt_Import(LblTransactionID.Text, LblUniqueID.Text, LblUniqueID.Text, LblFullName.Text, LblBusName.Text, LblPlateNumber.Text, LblPointA.Text, LblPointB.Text, LblPrice.Text, LblTime.Text, LblDate.Text, LblDOT.Text, 1)
         End If
 
 

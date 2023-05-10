@@ -3,6 +3,71 @@ Imports System.Threading
 
 Public Class Admin_Modify
 
+    Public Shared Sub TransactionHistory_AdminFilters(DataGrid As DataGridView, FilterType As Integer)
+        Dim DGV As New DataTable
+
+        Select Case FilterType
+            Case 1
+                DGV.Clear()
+                Dim Transportation_0 As String = "Purchased by you"
+                Dim Transportation_1 As String = "Purchased for other"
+                Dim Transportation_2 As String = "Transaction by administrator"
+
+                Sql = "SELECT TransactionNumber, TypeOfTransaction, DateTimeOfTransaction, Price, FullName, BusName, PlateNumber, Location, Destination, TimeOut, DateOut FROM TransactionHistory WHERE TypeOfTransaction ='" & Transportation_0 &
+                    "' OR TypeOfTransaction ='" & Transportation_1 & "' OR TypeOfTransaction ='" & Transportation_2 & "' ORDER BY TransactionNumber DESC"
+                Command = New OleDbCommand(Sql, Connection)
+                Dim DataAdapt As New OleDbDataAdapter
+                DataAdapt.SelectCommand = Command
+                DGV.Clear()
+                DataAdapt.Fill(DGV)
+                DataGrid.DataSource = DGV
+            Case 2
+                DGV.Clear()
+                Dim Transportation_Filtered As String = "Cash-in (L-Credits)"
+
+                Sql = "SELECT TransactionNumber, TypeOfTransaction, DateTimeOfTransaction, Price, FullName FROM TransactionHistory WHERE TypeOfTransaction ='" & Transportation_Filtered & "' ORDER BY TransactionNumber DESC"
+                Command = New OleDbCommand(Sql, Connection)
+                Dim DataAdapt As New OleDbDataAdapter
+                DataAdapt.SelectCommand = Command
+                DGV.Clear()
+                DataAdapt.Fill(DGV)
+                DataGrid.DataSource = DGV
+            Case 3
+                Dim Transportation_Filtered As String = "Premium Membership
+"
+                Sql = "SELECT TransactionNumber, TypeOfTransaction, DateTimeOfTransaction, Price, FullName FROM TransactionHistory WHERE TypeOfTransaction ='" & Transportation_Filtered & "' ORDER BY TransactionNumber DESC"
+                Command = New OleDbCommand(Sql, Connection)
+                Dim DataAdapt As New OleDbDataAdapter
+                DataAdapt.SelectCommand = Command
+                DGV.Clear()
+                DataAdapt.Fill(DGV)
+                DataGrid.DataSource = DGV
+            Case 4
+                DGV.Clear()
+
+                Sql = "SELECT TransactionNumber, TypeOfTransaction, DateTimeOfTransaction, Price, FullName, BusName, PlateNumber, Location, Destination, TimeOut, DateOut FROM TransactionHistory ORDER BY TransactionNumber DESC"
+                Command = New OleDbCommand(Sql, Connection)
+                Dim DataAdapt As New OleDbDataAdapter
+                DataAdapt.SelectCommand = Command
+                DGV.Clear()
+                DataAdapt.Fill(DGV)
+                DataGrid.DataSource = DGV
+        End Select
+    End Sub
+
+    Public Shared Sub CheckOTPEnable(UniqueID As String)
+        Sql = "SELECT OTPEnabled FROM UserAccounts WHERE UniqueID ='" & UniqueID & "'"
+        Command = New OleDbCommand(Sql, Connection)
+        DataReader = Command.ExecuteReader
+
+        While DataReader.Read
+            If DataReader("OTPEnabled") = True Then
+                frmModAdminMainMenu.BtnOTP_Account.Text = "OTP Enabled"
+                frmModAdminMainMenu.BtnOTP_Account.BackColor = Color.PaleGreen
+            End If
+        End While
+    End Sub
+
     Public Shared Sub CheckUserAccess_MainMenu(UniqueID As String)
         Sql = "SELECT CanEditUser FROM UserSettings WHERE UniqueID ='" & UniqueID & "'"
         Command = New OleDbCommand(Sql, Connection)
@@ -100,6 +165,12 @@ Public Class Admin_Modify
 
             .Columns(0).ReadOnly = True
             .Columns(1).ReadOnly = True
+        End With
+    End Sub
+
+    Public Shared Sub FeedbackDGVColumns(DGV As DataGridView)
+        With DGV
+            .Columns(0).HeaderText = "Feedback Number"
         End With
     End Sub
 

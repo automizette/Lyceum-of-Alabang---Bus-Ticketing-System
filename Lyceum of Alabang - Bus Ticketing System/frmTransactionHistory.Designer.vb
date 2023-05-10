@@ -31,7 +31,9 @@ Partial Class frmTransactionHistory
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnChangeFilter = New System.Windows.Forms.Button()
         Me.DgvTransactionHistory = New System.Windows.Forms.DataGridView()
+        Me.PbTransactionList = New System.Windows.Forms.PictureBox()
         CType(Me.DgvTransactionHistory, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbTransactionList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -40,7 +42,7 @@ Partial Class frmTransactionHistory
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Raleway", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(12, 21)
+        Me.Label1.Location = New System.Drawing.Point(64, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(236, 29)
         Me.Label1.TabIndex = 1
@@ -124,12 +126,26 @@ Partial Class frmTransactionHistory
         Me.DgvTransactionHistory.Size = New System.Drawing.Size(1065, 401)
         Me.DgvTransactionHistory.TabIndex = 6
         '
+        'PbTransactionList
+        '
+        Me.PbTransactionList.BackColor = System.Drawing.Color.Transparent
+        Me.PbTransactionList.Enabled = False
+        Me.PbTransactionList.Image = CType(resources.GetObject("PbTransactionList.Image"), System.Drawing.Image)
+        Me.PbTransactionList.InitialImage = CType(resources.GetObject("PbTransactionList.InitialImage"), System.Drawing.Image)
+        Me.PbTransactionList.Location = New System.Drawing.Point(13, 9)
+        Me.PbTransactionList.Name = "PbTransactionList"
+        Me.PbTransactionList.Size = New System.Drawing.Size(45, 42)
+        Me.PbTransactionList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PbTransactionList.TabIndex = 7
+        Me.PbTransactionList.TabStop = False
+        '
         'frmTransactionHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1094, 534)
+        Me.Controls.Add(Me.PbTransactionList)
         Me.Controls.Add(Me.DgvTransactionHistory)
         Me.Controls.Add(Me.BtnChangeFilter)
         Me.Controls.Add(Me.Label3)
@@ -142,6 +158,7 @@ Partial Class frmTransactionHistory
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmTransactionHistory"
         CType(Me.DgvTransactionHistory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbTransactionList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -152,4 +169,5 @@ Partial Class frmTransactionHistory
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnChangeFilter As Button
     Friend WithEvents DgvTransactionHistory As DataGridView
+    Friend WithEvents PbTransactionList As PictureBox
 End Class

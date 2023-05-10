@@ -36,16 +36,12 @@ Partial Class frmModAdminMainMenu
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TbModAdminCenter = New System.Windows.Forms.TabControl()
         Me.TbInformationTab = New System.Windows.Forms.TabPage()
+        Me.PbInfoDesk = New System.Windows.Forms.PictureBox()
+        Me.LblUniqueID_AboutYou = New System.Windows.Forms.Label()
+        Me.LblAccountType = New System.Windows.Forms.Label()
         Me.LblUsername = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GrpAboutYou = New System.Windows.Forms.GroupBox()
-        Me.LblUniqueID_AboutYou = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.LblAccountType = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.LblAboutYou_FullName = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.LblReservationActive = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.LblAvailableBus = New System.Windows.Forms.Label()
@@ -56,6 +52,7 @@ Partial Class frmModAdminMainMenu
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LblRegisteredUsers = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
+        Me.LblAboutYou_FullName = New System.Windows.Forms.Label()
         Me.TbBookingPage = New System.Windows.Forms.TabPage()
         Me.BtnConfirmEmail = New System.Windows.Forms.Button()
         Me.TxtEmail = New System.Windows.Forms.TextBox()
@@ -158,6 +155,30 @@ Partial Class frmModAdminMainMenu
         Me.LblFirstName_EditUser = New System.Windows.Forms.Label()
         Me.PbProfilePicture = New System.Windows.Forms.PictureBox()
         Me.LblLastName_EditUser = New System.Windows.Forms.Label()
+        Me.TbAccountInfo = New System.Windows.Forms.TabPage()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.BtnDeactivateAccount = New System.Windows.Forms.Button()
+        Me.BtnOTP_Account = New System.Windows.Forms.Button()
+        Me.BtnChangePassword = New System.Windows.Forms.Button()
+        Me.BtnSaveEmail_Account = New System.Windows.Forms.Button()
+        Me.BtnSaveUsername_Account = New System.Windows.Forms.Button()
+        Me.BtnChangeEmail_Account = New System.Windows.Forms.Button()
+        Me.BtnChangeUsername = New System.Windows.Forms.Button()
+        Me.LblAccountType_Account = New System.Windows.Forms.Label()
+        Me.TxtUsername_Account = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.TxtEmail_Account = New System.Windows.Forms.TextBox()
+        Me.BtnSavePic_PFP = New System.Windows.Forms.Button()
+        Me.BtnChangePFP_AccInfo = New System.Windows.Forms.Button()
+        Me.LblLRN_AccInfo = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.LblUniqueID_AccInfo = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.LblUsername_AccInfo = New System.Windows.Forms.Label()
+        Me.LblFullName_AccInfo = New System.Windows.Forms.Label()
+        Me.PbPFP_AccInfo = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblFullName = New System.Windows.Forms.Label()
         Me.PbBook = New System.Windows.Forms.PictureBox()
@@ -171,12 +192,17 @@ Partial Class frmModAdminMainMenu
         Me.PbEditUser = New System.Windows.Forms.PictureBox()
         Me.PbEditBus = New System.Windows.Forms.PictureBox()
         Me.PbAdminSettings = New System.Windows.Forms.PictureBox()
+        Me.PbAccount = New System.Windows.Forms.PictureBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ProgramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutTheSystemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PbInformationDesk, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.TbModAdminCenter.SuspendLayout()
         Me.TbInformationTab.SuspendLayout()
+        CType(Me.PbInfoDesk, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        Me.GrpAboutYou.SuspendLayout()
         Me.TbBookingPage.SuspendLayout()
         Me.PnlBookingCenter.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -197,11 +223,16 @@ Partial Class frmModAdminMainMenu
         CType(Me.DgvUserList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
         CType(Me.PbProfilePicture, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TbAccountInfo.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        CType(Me.PbPFP_AccInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbBook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbEditReservations, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbEditUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbEditBus, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbAdminSettings, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbAccount, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PbInformationDesk
@@ -231,26 +262,65 @@ Partial Class frmModAdminMainMenu
         Me.TbModAdminCenter.Controls.Add(Me.TbEditReservation)
         Me.TbModAdminCenter.Controls.Add(Me.TbEditBuses)
         Me.TbModAdminCenter.Controls.Add(Me.TbEditUsers)
+        Me.TbModAdminCenter.Controls.Add(Me.TbAccountInfo)
         Me.TbModAdminCenter.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TbModAdminCenter.Location = New System.Drawing.Point(1, -10)
+        Me.TbModAdminCenter.Location = New System.Drawing.Point(1, -15)
         Me.TbModAdminCenter.Name = "TbModAdminCenter"
         Me.TbModAdminCenter.SelectedIndex = 0
-        Me.TbModAdminCenter.Size = New System.Drawing.Size(905, 487)
+        Me.TbModAdminCenter.Size = New System.Drawing.Size(905, 492)
         Me.TbModAdminCenter.TabIndex = 0
         '
         'TbInformationTab
         '
         Me.TbInformationTab.BackgroundImage = CType(resources.GetObject("TbInformationTab.BackgroundImage"), System.Drawing.Image)
+        Me.TbInformationTab.Controls.Add(Me.PbInfoDesk)
+        Me.TbInformationTab.Controls.Add(Me.LblUniqueID_AboutYou)
+        Me.TbInformationTab.Controls.Add(Me.LblAccountType)
         Me.TbInformationTab.Controls.Add(Me.LblUsername)
         Me.TbInformationTab.Controls.Add(Me.Label3)
         Me.TbInformationTab.Controls.Add(Me.GroupBox1)
+        Me.TbInformationTab.Controls.Add(Me.LblAboutYou_FullName)
         Me.TbInformationTab.Location = New System.Drawing.Point(4, 23)
         Me.TbInformationTab.Name = "TbInformationTab"
         Me.TbInformationTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbInformationTab.Size = New System.Drawing.Size(897, 460)
+        Me.TbInformationTab.Size = New System.Drawing.Size(897, 465)
         Me.TbInformationTab.TabIndex = 0
         Me.TbInformationTab.Text = "InformationTab"
         Me.TbInformationTab.UseVisualStyleBackColor = True
+        '
+        'PbInfoDesk
+        '
+        Me.PbInfoDesk.InitialImage = CType(resources.GetObject("PbInfoDesk.InitialImage"), System.Drawing.Image)
+        Me.PbInfoDesk.Location = New System.Drawing.Point(753, 20)
+        Me.PbInfoDesk.Name = "PbInfoDesk"
+        Me.PbInfoDesk.Size = New System.Drawing.Size(115, 115)
+        Me.PbInfoDesk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbInfoDesk.TabIndex = 33
+        Me.PbInfoDesk.TabStop = False
+        '
+        'LblUniqueID_AboutYou
+        '
+        Me.LblUniqueID_AboutYou.BackColor = System.Drawing.Color.Transparent
+        Me.LblUniqueID_AboutYou.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUniqueID_AboutYou.ForeColor = System.Drawing.Color.White
+        Me.LblUniqueID_AboutYou.Location = New System.Drawing.Point(487, 42)
+        Me.LblUniqueID_AboutYou.Name = "LblUniqueID_AboutYou"
+        Me.LblUniqueID_AboutYou.Size = New System.Drawing.Size(252, 19)
+        Me.LblUniqueID_AboutYou.TabIndex = 32
+        Me.LblUniqueID_AboutYou.Text = "LOA-XXXXXX"
+        Me.LblUniqueID_AboutYou.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'LblAccountType
+        '
+        Me.LblAccountType.BackColor = System.Drawing.Color.Transparent
+        Me.LblAccountType.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAccountType.ForeColor = System.Drawing.Color.White
+        Me.LblAccountType.Location = New System.Drawing.Point(547, 75)
+        Me.LblAccountType.Name = "LblAccountType"
+        Me.LblAccountType.Size = New System.Drawing.Size(192, 19)
+        Me.LblAccountType.TabIndex = 30
+        Me.LblAccountType.Text = "Type"
+        Me.LblAccountType.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'LblUsername
         '
@@ -278,7 +348,6 @@ Partial Class frmModAdminMainMenu
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.GrpAboutYou)
         Me.GroupBox1.Controls.Add(Me.LblReservationActive)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.LblAvailableBus)
@@ -291,101 +360,12 @@ Partial Class frmModAdminMainMenu
         Me.GroupBox1.Controls.Add(Me.Label35)
         Me.GroupBox1.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(34, 130)
+        Me.GroupBox1.Location = New System.Drawing.Point(34, 141)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(835, 302)
+        Me.GroupBox1.Size = New System.Drawing.Size(835, 291)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Information Desk"
-        '
-        'GrpAboutYou
-        '
-        Me.GrpAboutYou.Controls.Add(Me.LblUniqueID_AboutYou)
-        Me.GrpAboutYou.Controls.Add(Me.Label13)
-        Me.GrpAboutYou.Controls.Add(Me.LblAccountType)
-        Me.GrpAboutYou.Controls.Add(Me.Label11)
-        Me.GrpAboutYou.Controls.Add(Me.LblAboutYou_FullName)
-        Me.GrpAboutYou.Controls.Add(Me.Label9)
-        Me.GrpAboutYou.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GrpAboutYou.ForeColor = System.Drawing.Color.White
-        Me.GrpAboutYou.Location = New System.Drawing.Point(579, 49)
-        Me.GrpAboutYou.Name = "GrpAboutYou"
-        Me.GrpAboutYou.Size = New System.Drawing.Size(228, 210)
-        Me.GrpAboutYou.TabIndex = 27
-        Me.GrpAboutYou.TabStop = False
-        Me.GrpAboutYou.Text = "About you"
-        '
-        'LblUniqueID_AboutYou
-        '
-        Me.LblUniqueID_AboutYou.AutoSize = True
-        Me.LblUniqueID_AboutYou.BackColor = System.Drawing.Color.Transparent
-        Me.LblUniqueID_AboutYou.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUniqueID_AboutYou.ForeColor = System.Drawing.Color.White
-        Me.LblUniqueID_AboutYou.Location = New System.Drawing.Point(13, 105)
-        Me.LblUniqueID_AboutYou.Name = "LblUniqueID_AboutYou"
-        Me.LblUniqueID_AboutYou.Size = New System.Drawing.Size(107, 19)
-        Me.LblUniqueID_AboutYou.TabIndex = 32
-        Me.LblUniqueID_AboutYou.Text = "LOA-XXXXXX"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(14, 83)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(68, 15)
-        Me.Label13.TabIndex = 31
-        Me.Label13.Text = "UniqueID:"
-        '
-        'LblAccountType
-        '
-        Me.LblAccountType.AutoSize = True
-        Me.LblAccountType.BackColor = System.Drawing.Color.Transparent
-        Me.LblAccountType.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAccountType.ForeColor = System.Drawing.Color.White
-        Me.LblAccountType.Location = New System.Drawing.Point(13, 164)
-        Me.LblAccountType.Name = "LblAccountType"
-        Me.LblAccountType.Size = New System.Drawing.Size(47, 19)
-        Me.LblAccountType.TabIndex = 30
-        Me.LblAccountType.Text = "Type"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(14, 144)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(95, 15)
-        Me.Label11.TabIndex = 29
-        Me.Label11.Text = "Account Type:"
-        '
-        'LblAboutYou_FullName
-        '
-        Me.LblAboutYou_FullName.AutoSize = True
-        Me.LblAboutYou_FullName.BackColor = System.Drawing.Color.Transparent
-        Me.LblAboutYou_FullName.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAboutYou_FullName.ForeColor = System.Drawing.Color.White
-        Me.LblAboutYou_FullName.Location = New System.Drawing.Point(13, 48)
-        Me.LblAboutYou_FullName.Name = "LblAboutYou_FullName"
-        Me.LblAboutYou_FullName.Size = New System.Drawing.Size(87, 19)
-        Me.LblAboutYou_FullName.TabIndex = 28
-        Me.LblAboutYou_FullName.Text = "Full Name"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(14, 29)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(74, 15)
-        Me.Label9.TabIndex = 28
-        Me.Label9.Text = "Full Name:"
         '
         'LblReservationActive
         '
@@ -507,6 +487,18 @@ Partial Class frmModAdminMainMenu
         Me.Label35.TabIndex = 17
         Me.Label35.Text = "Registered user:"
         '
+        'LblAboutYou_FullName
+        '
+        Me.LblAboutYou_FullName.BackColor = System.Drawing.Color.Transparent
+        Me.LblAboutYou_FullName.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAboutYou_FullName.ForeColor = System.Drawing.Color.White
+        Me.LblAboutYou_FullName.Location = New System.Drawing.Point(374, 21)
+        Me.LblAboutYou_FullName.Name = "LblAboutYou_FullName"
+        Me.LblAboutYou_FullName.Size = New System.Drawing.Size(365, 19)
+        Me.LblAboutYou_FullName.TabIndex = 28
+        Me.LblAboutYou_FullName.Text = "Full Name"
+        Me.LblAboutYou_FullName.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'TbBookingPage
         '
         Me.TbBookingPage.BackgroundImage = CType(resources.GetObject("TbBookingPage.BackgroundImage"), System.Drawing.Image)
@@ -517,7 +509,7 @@ Partial Class frmModAdminMainMenu
         Me.TbBookingPage.Location = New System.Drawing.Point(4, 23)
         Me.TbBookingPage.Name = "TbBookingPage"
         Me.TbBookingPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbBookingPage.Size = New System.Drawing.Size(897, 460)
+        Me.TbBookingPage.Size = New System.Drawing.Size(897, 465)
         Me.TbBookingPage.TabIndex = 1
         Me.TbBookingPage.Text = "Booking Page"
         Me.TbBookingPage.UseVisualStyleBackColor = True
@@ -526,7 +518,7 @@ Partial Class frmModAdminMainMenu
         '
         Me.BtnConfirmEmail.BackColor = System.Drawing.Color.HotPink
         Me.BtnConfirmEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnConfirmEmail.Location = New System.Drawing.Point(500, 19)
+        Me.BtnConfirmEmail.Location = New System.Drawing.Point(500, 12)
         Me.BtnConfirmEmail.Name = "BtnConfirmEmail"
         Me.BtnConfirmEmail.Size = New System.Drawing.Size(93, 23)
         Me.BtnConfirmEmail.TabIndex = 23
@@ -536,7 +528,7 @@ Partial Class frmModAdminMainMenu
         'TxtEmail
         '
         Me.TxtEmail.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEmail.Location = New System.Drawing.Point(166, 19)
+        Me.TxtEmail.Location = New System.Drawing.Point(166, 12)
         Me.TxtEmail.Name = "TxtEmail"
         Me.TxtEmail.Size = New System.Drawing.Size(323, 25)
         Me.TxtEmail.TabIndex = 2
@@ -546,7 +538,7 @@ Partial Class frmModAdminMainMenu
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(15, 23)
+        Me.Label10.Location = New System.Drawing.Point(15, 16)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(144, 18)
         Me.Label10.TabIndex = 1
@@ -929,7 +921,7 @@ Partial Class frmModAdminMainMenu
         Me.TbEditReservation.Location = New System.Drawing.Point(4, 23)
         Me.TbEditReservation.Name = "TbEditReservation"
         Me.TbEditReservation.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbEditReservation.Size = New System.Drawing.Size(897, 460)
+        Me.TbEditReservation.Size = New System.Drawing.Size(897, 471)
         Me.TbEditReservation.TabIndex = 2
         Me.TbEditReservation.Text = "Edit Reservation"
         Me.TbEditReservation.UseVisualStyleBackColor = True
@@ -1287,7 +1279,7 @@ Partial Class frmModAdminMainMenu
         Me.TbEditBuses.Location = New System.Drawing.Point(4, 23)
         Me.TbEditBuses.Name = "TbEditBuses"
         Me.TbEditBuses.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbEditBuses.Size = New System.Drawing.Size(897, 460)
+        Me.TbEditBuses.Size = New System.Drawing.Size(897, 471)
         Me.TbEditBuses.TabIndex = 3
         Me.TbEditBuses.Text = "Edit Bus"
         Me.TbEditBuses.UseVisualStyleBackColor = True
@@ -1536,7 +1528,7 @@ Partial Class frmModAdminMainMenu
         Me.TbEditUsers.Location = New System.Drawing.Point(4, 23)
         Me.TbEditUsers.Name = "TbEditUsers"
         Me.TbEditUsers.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbEditUsers.Size = New System.Drawing.Size(897, 460)
+        Me.TbEditUsers.Size = New System.Drawing.Size(897, 471)
         Me.TbEditUsers.TabIndex = 4
         Me.TbEditUsers.Text = "Edit Users"
         Me.TbEditUsers.UseVisualStyleBackColor = True
@@ -1808,6 +1800,294 @@ Partial Class frmModAdminMainMenu
         Me.LblLastName_EditUser.TabIndex = 4
         Me.LblLastName_EditUser.Text = "Last Name"
         '
+        'TbAccountInfo
+        '
+        Me.TbAccountInfo.BackgroundImage = CType(resources.GetObject("TbAccountInfo.BackgroundImage"), System.Drawing.Image)
+        Me.TbAccountInfo.Controls.Add(Me.GroupBox6)
+        Me.TbAccountInfo.Controls.Add(Me.BtnSavePic_PFP)
+        Me.TbAccountInfo.Controls.Add(Me.BtnChangePFP_AccInfo)
+        Me.TbAccountInfo.Controls.Add(Me.LblLRN_AccInfo)
+        Me.TbAccountInfo.Controls.Add(Me.Label13)
+        Me.TbAccountInfo.Controls.Add(Me.LblUniqueID_AccInfo)
+        Me.TbAccountInfo.Controls.Add(Me.Label9)
+        Me.TbAccountInfo.Controls.Add(Me.LblUsername_AccInfo)
+        Me.TbAccountInfo.Controls.Add(Me.LblFullName_AccInfo)
+        Me.TbAccountInfo.Controls.Add(Me.PbPFP_AccInfo)
+        Me.TbAccountInfo.Location = New System.Drawing.Point(4, 23)
+        Me.TbAccountInfo.Name = "TbAccountInfo"
+        Me.TbAccountInfo.Padding = New System.Windows.Forms.Padding(3)
+        Me.TbAccountInfo.Size = New System.Drawing.Size(897, 471)
+        Me.TbAccountInfo.TabIndex = 5
+        Me.TbAccountInfo.Text = "Acc. Information"
+        Me.TbAccountInfo.UseVisualStyleBackColor = True
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.BtnDeactivateAccount)
+        Me.GroupBox6.Controls.Add(Me.BtnOTP_Account)
+        Me.GroupBox6.Controls.Add(Me.BtnChangePassword)
+        Me.GroupBox6.Controls.Add(Me.BtnSaveEmail_Account)
+        Me.GroupBox6.Controls.Add(Me.BtnSaveUsername_Account)
+        Me.GroupBox6.Controls.Add(Me.BtnChangeEmail_Account)
+        Me.GroupBox6.Controls.Add(Me.BtnChangeUsername)
+        Me.GroupBox6.Controls.Add(Me.LblAccountType_Account)
+        Me.GroupBox6.Controls.Add(Me.TxtUsername_Account)
+        Me.GroupBox6.Controls.Add(Me.Label11)
+        Me.GroupBox6.Controls.Add(Me.Label38)
+        Me.GroupBox6.Controls.Add(Me.Label39)
+        Me.GroupBox6.Controls.Add(Me.TxtEmail_Account)
+        Me.GroupBox6.ForeColor = System.Drawing.Color.White
+        Me.GroupBox6.Location = New System.Drawing.Point(26, 282)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(846, 157)
+        Me.GroupBox6.TabIndex = 43
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "User Information"
+        '
+        'BtnDeactivateAccount
+        '
+        Me.BtnDeactivateAccount.BackColor = System.Drawing.Color.LightCoral
+        Me.BtnDeactivateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDeactivateAccount.ForeColor = System.Drawing.Color.Black
+        Me.BtnDeactivateAccount.Location = New System.Drawing.Point(636, 109)
+        Me.BtnDeactivateAccount.Name = "BtnDeactivateAccount"
+        Me.BtnDeactivateAccount.Size = New System.Drawing.Size(186, 28)
+        Me.BtnDeactivateAccount.TabIndex = 11
+        Me.BtnDeactivateAccount.Text = "Deactivate Account"
+        Me.BtnDeactivateAccount.UseVisualStyleBackColor = False
+        '
+        'BtnOTP_Account
+        '
+        Me.BtnOTP_Account.BackColor = System.Drawing.Color.Orange
+        Me.BtnOTP_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnOTP_Account.ForeColor = System.Drawing.Color.Black
+        Me.BtnOTP_Account.Location = New System.Drawing.Point(636, 71)
+        Me.BtnOTP_Account.Name = "BtnOTP_Account"
+        Me.BtnOTP_Account.Size = New System.Drawing.Size(186, 28)
+        Me.BtnOTP_Account.TabIndex = 10
+        Me.BtnOTP_Account.Text = "OTP Disabled"
+        Me.BtnOTP_Account.UseVisualStyleBackColor = False
+        '
+        'BtnChangePassword
+        '
+        Me.BtnChangePassword.BackColor = System.Drawing.Color.Turquoise
+        Me.BtnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnChangePassword.ForeColor = System.Drawing.Color.Black
+        Me.BtnChangePassword.Location = New System.Drawing.Point(636, 29)
+        Me.BtnChangePassword.Name = "BtnChangePassword"
+        Me.BtnChangePassword.Size = New System.Drawing.Size(186, 28)
+        Me.BtnChangePassword.TabIndex = 9
+        Me.BtnChangePassword.Text = "Change Password"
+        Me.BtnChangePassword.UseVisualStyleBackColor = False
+        '
+        'BtnSaveEmail_Account
+        '
+        Me.BtnSaveEmail_Account.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnSaveEmail_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSaveEmail_Account.ForeColor = System.Drawing.Color.Black
+        Me.BtnSaveEmail_Account.Location = New System.Drawing.Point(437, 74)
+        Me.BtnSaveEmail_Account.Name = "BtnSaveEmail_Account"
+        Me.BtnSaveEmail_Account.Size = New System.Drawing.Size(75, 28)
+        Me.BtnSaveEmail_Account.TabIndex = 8
+        Me.BtnSaveEmail_Account.Text = "Save"
+        Me.BtnSaveEmail_Account.UseVisualStyleBackColor = False
+        Me.BtnSaveEmail_Account.Visible = False
+        '
+        'BtnSaveUsername_Account
+        '
+        Me.BtnSaveUsername_Account.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnSaveUsername_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSaveUsername_Account.ForeColor = System.Drawing.Color.Black
+        Me.BtnSaveUsername_Account.Location = New System.Drawing.Point(437, 30)
+        Me.BtnSaveUsername_Account.Name = "BtnSaveUsername_Account"
+        Me.BtnSaveUsername_Account.Size = New System.Drawing.Size(75, 28)
+        Me.BtnSaveUsername_Account.TabIndex = 7
+        Me.BtnSaveUsername_Account.Text = "Save"
+        Me.BtnSaveUsername_Account.UseVisualStyleBackColor = False
+        Me.BtnSaveUsername_Account.Visible = False
+        '
+        'BtnChangeEmail_Account
+        '
+        Me.BtnChangeEmail_Account.BackColor = System.Drawing.Color.Plum
+        Me.BtnChangeEmail_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnChangeEmail_Account.ForeColor = System.Drawing.Color.Black
+        Me.BtnChangeEmail_Account.Location = New System.Drawing.Point(356, 74)
+        Me.BtnChangeEmail_Account.Name = "BtnChangeEmail_Account"
+        Me.BtnChangeEmail_Account.Size = New System.Drawing.Size(75, 28)
+        Me.BtnChangeEmail_Account.TabIndex = 6
+        Me.BtnChangeEmail_Account.Text = "Change"
+        Me.BtnChangeEmail_Account.UseVisualStyleBackColor = False
+        '
+        'BtnChangeUsername
+        '
+        Me.BtnChangeUsername.BackColor = System.Drawing.Color.Plum
+        Me.BtnChangeUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnChangeUsername.ForeColor = System.Drawing.Color.Black
+        Me.BtnChangeUsername.Location = New System.Drawing.Point(356, 30)
+        Me.BtnChangeUsername.Name = "BtnChangeUsername"
+        Me.BtnChangeUsername.Size = New System.Drawing.Size(75, 28)
+        Me.BtnChangeUsername.TabIndex = 0
+        Me.BtnChangeUsername.Text = "Change"
+        Me.BtnChangeUsername.UseVisualStyleBackColor = False
+        '
+        'LblAccountType_Account
+        '
+        Me.LblAccountType_Account.AutoSize = True
+        Me.LblAccountType_Account.Font = New System.Drawing.Font("Raleway SemiBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAccountType_Account.Location = New System.Drawing.Point(131, 120)
+        Me.LblAccountType_Account.Name = "LblAccountType_Account"
+        Me.LblAccountType_Account.Size = New System.Drawing.Size(26, 18)
+        Me.LblAccountType_Account.TabIndex = 5
+        Me.LblAccountType_Account.Text = "---"
+        '
+        'TxtUsername_Account
+        '
+        Me.TxtUsername_Account.Enabled = False
+        Me.TxtUsername_Account.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUsername_Account.Location = New System.Drawing.Point(110, 32)
+        Me.TxtUsername_Account.Name = "TxtUsername_Account"
+        Me.TxtUsername_Account.Size = New System.Drawing.Size(240, 23)
+        Me.TxtUsername_Account.TabIndex = 1
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(17, 120)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(108, 18)
+        Me.Label11.TabIndex = 4
+        Me.Label11.Text = "Account type:"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(18, 37)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(86, 18)
+        Me.Label38.TabIndex = 0
+        Me.Label38.Text = "Username:"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(17, 82)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(53, 18)
+        Me.Label39.TabIndex = 2
+        Me.Label39.Text = "Email:"
+        '
+        'TxtEmail_Account
+        '
+        Me.TxtEmail_Account.Enabled = False
+        Me.TxtEmail_Account.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtEmail_Account.Location = New System.Drawing.Point(110, 77)
+        Me.TxtEmail_Account.Name = "TxtEmail_Account"
+        Me.TxtEmail_Account.Size = New System.Drawing.Size(240, 23)
+        Me.TxtEmail_Account.TabIndex = 3
+        '
+        'BtnSavePic_PFP
+        '
+        Me.BtnSavePic_PFP.BackColor = System.Drawing.Color.MediumSpringGreen
+        Me.BtnSavePic_PFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSavePic_PFP.Location = New System.Drawing.Point(26, 205)
+        Me.BtnSavePic_PFP.Name = "BtnSavePic_PFP"
+        Me.BtnSavePic_PFP.Size = New System.Drawing.Size(135, 32)
+        Me.BtnSavePic_PFP.TabIndex = 42
+        Me.BtnSavePic_PFP.Text = "Save"
+        Me.BtnSavePic_PFP.UseVisualStyleBackColor = False
+        Me.BtnSavePic_PFP.Visible = False
+        '
+        'BtnChangePFP_AccInfo
+        '
+        Me.BtnChangePFP_AccInfo.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.BtnChangePFP_AccInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnChangePFP_AccInfo.Location = New System.Drawing.Point(26, 167)
+        Me.BtnChangePFP_AccInfo.Name = "BtnChangePFP_AccInfo"
+        Me.BtnChangePFP_AccInfo.Size = New System.Drawing.Size(135, 32)
+        Me.BtnChangePFP_AccInfo.TabIndex = 41
+        Me.BtnChangePFP_AccInfo.Text = "Change"
+        Me.BtnChangePFP_AccInfo.UseVisualStyleBackColor = False
+        '
+        'LblLRN_AccInfo
+        '
+        Me.LblLRN_AccInfo.AutoSize = True
+        Me.LblLRN_AccInfo.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLRN_AccInfo.ForeColor = System.Drawing.Color.White
+        Me.LblLRN_AccInfo.Location = New System.Drawing.Point(285, 133)
+        Me.LblLRN_AccInfo.Name = "LblLRN_AccInfo"
+        Me.LblLRN_AccInfo.Size = New System.Drawing.Size(84, 14)
+        Me.LblLRN_AccInfo.TabIndex = 40
+        Me.LblLRN_AccInfo.Text = "00000000000"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Raleway SemiBold", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.White
+        Me.Label13.Location = New System.Drawing.Point(182, 133)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(103, 14)
+        Me.Label13.TabIndex = 39
+        Me.Label13.Text = "LRN/ID Number:"
+        '
+        'LblUniqueID_AccInfo
+        '
+        Me.LblUniqueID_AccInfo.AutoSize = True
+        Me.LblUniqueID_AccInfo.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUniqueID_AccInfo.ForeColor = System.Drawing.Color.White
+        Me.LblUniqueID_AccInfo.Location = New System.Drawing.Point(244, 111)
+        Me.LblUniqueID_AccInfo.Name = "LblUniqueID_AccInfo"
+        Me.LblUniqueID_AccInfo.Size = New System.Drawing.Size(83, 14)
+        Me.LblUniqueID_AccInfo.TabIndex = 38
+        Me.LblUniqueID_AccInfo.Text = "LOA-XXXXXX"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Raleway SemiBold", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(182, 111)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(63, 14)
+        Me.Label9.TabIndex = 37
+        Me.Label9.Text = "UniqueID:"
+        '
+        'LblUsername_AccInfo
+        '
+        Me.LblUsername_AccInfo.AutoSize = True
+        Me.LblUsername_AccInfo.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsername_AccInfo.ForeColor = System.Drawing.Color.White
+        Me.LblUsername_AccInfo.Location = New System.Drawing.Point(182, 80)
+        Me.LblUsername_AccInfo.Name = "LblUsername_AccInfo"
+        Me.LblUsername_AccInfo.Size = New System.Drawing.Size(82, 18)
+        Me.LblUsername_AccInfo.TabIndex = 36
+        Me.LblUsername_AccInfo.Text = "Username"
+        '
+        'LblFullName_AccInfo
+        '
+        Me.LblFullName_AccInfo.AutoSize = True
+        Me.LblFullName_AccInfo.BackColor = System.Drawing.Color.Transparent
+        Me.LblFullName_AccInfo.Font = New System.Drawing.Font("Raleway ExtraBold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFullName_AccInfo.ForeColor = System.Drawing.Color.White
+        Me.LblFullName_AccInfo.Location = New System.Drawing.Point(179, 43)
+        Me.LblFullName_AccInfo.Name = "LblFullName_AccInfo"
+        Me.LblFullName_AccInfo.Size = New System.Drawing.Size(146, 31)
+        Me.LblFullName_AccInfo.TabIndex = 35
+        Me.LblFullName_AccInfo.Text = "Full Name"
+        '
+        'PbPFP_AccInfo
+        '
+        Me.PbPFP_AccInfo.InitialImage = CType(resources.GetObject("PbPFP_AccInfo.InitialImage"), System.Drawing.Image)
+        Me.PbPFP_AccInfo.Location = New System.Drawing.Point(26, 26)
+        Me.PbPFP_AccInfo.Name = "PbPFP_AccInfo"
+        Me.PbPFP_AccInfo.Size = New System.Drawing.Size(135, 135)
+        Me.PbPFP_AccInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbPFP_AccInfo.TabIndex = 34
+        Me.PbPFP_AccInfo.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -1925,7 +2205,7 @@ Partial Class frmModAdminMainMenu
         Me.PbEditUser.Enabled = False
         Me.PbEditUser.Image = CType(resources.GetObject("PbEditUser.Image"), System.Drawing.Image)
         Me.PbEditUser.InitialImage = CType(resources.GetObject("PbEditUser.InitialImage"), System.Drawing.Image)
-        Me.PbEditUser.Location = New System.Drawing.Point(21, 439)
+        Me.PbEditUser.Location = New System.Drawing.Point(21, 434)
         Me.PbEditUser.Name = "PbEditUser"
         Me.PbEditUser.Size = New System.Drawing.Size(34, 36)
         Me.PbEditUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1955,12 +2235,52 @@ Partial Class frmModAdminMainMenu
         Me.PbAdminSettings.TabStop = False
         Me.PbAdminSettings.Visible = False
         '
+        'PbAccount
+        '
+        Me.PbAccount.BackColor = System.Drawing.Color.Transparent
+        Me.PbAccount.Image = CType(resources.GetObject("PbAccount.Image"), System.Drawing.Image)
+        Me.PbAccount.Location = New System.Drawing.Point(19, 502)
+        Me.PbAccount.Name = "PbAccount"
+        Me.PbAccount.Size = New System.Drawing.Size(37, 40)
+        Me.PbAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PbAccount.TabIndex = 18
+        Me.PbAccount.TabStop = False
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProgramToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1055, 24)
+        Me.MenuStrip1.TabIndex = 19
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ProgramToolStripMenuItem
+        '
+        Me.ProgramToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.AboutTheSystemToolStripMenuItem})
+        Me.ProgramToolStripMenuItem.Name = "ProgramToolStripMenuItem"
+        Me.ProgramToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
+        Me.ProgramToolStripMenuItem.Text = "Program"
+        '
+        'LogOutToolStripMenuItem
+        '
+        Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
+        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.LogOutToolStripMenuItem.Text = "Log out"
+        '
+        'AboutTheSystemToolStripMenuItem
+        '
+        Me.AboutTheSystemToolStripMenuItem.Name = "AboutTheSystemToolStripMenuItem"
+        Me.AboutTheSystemToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.AboutTheSystemToolStripMenuItem.Text = "About the system"
+        '
         'frmModAdminMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1055, 644)
+        Me.Controls.Add(Me.PbAccount)
         Me.Controls.Add(Me.PbAdminSettings)
         Me.Controls.Add(Me.PbEditBus)
         Me.Controls.Add(Me.PbEditUser)
@@ -1975,7 +2295,9 @@ Partial Class frmModAdminMainMenu
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PbInformationDesk)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "frmModAdminMainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1985,10 +2307,9 @@ Partial Class frmModAdminMainMenu
         Me.TbModAdminCenter.ResumeLayout(False)
         Me.TbInformationTab.ResumeLayout(False)
         Me.TbInformationTab.PerformLayout()
+        CType(Me.PbInfoDesk, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GrpAboutYou.ResumeLayout(False)
-        Me.GrpAboutYou.PerformLayout()
         Me.TbBookingPage.ResumeLayout(False)
         Me.TbBookingPage.PerformLayout()
         Me.PnlBookingCenter.ResumeLayout(False)
@@ -2018,11 +2339,19 @@ Partial Class frmModAdminMainMenu
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         CType(Me.PbProfilePicture, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TbAccountInfo.ResumeLayout(False)
+        Me.TbAccountInfo.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        CType(Me.PbPFP_AccInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbBook, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbEditReservations, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbEditUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbEditBus, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbAdminSettings, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbAccount, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2053,13 +2382,9 @@ Partial Class frmModAdminMainMenu
     Friend WithEvents LblUniqueID_MainMenu As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents LblLRN As Label
-    Friend WithEvents GrpAboutYou As GroupBox
     Friend WithEvents LblUniqueID_AboutYou As Label
-    Friend WithEvents Label13 As Label
     Friend WithEvents LblAccountType As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents LblAboutYou_FullName As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents LblLocalServerDate_Time As Label
     Friend WithEvents TxtEmail As TextBox
@@ -2167,4 +2492,34 @@ Partial Class frmModAdminMainMenu
     Friend WithEvents Label34 As Label
     Friend WithEvents BtnDeactivateUser As Button
     Friend WithEvents BtnActivateUser As Button
+    Friend WithEvents PbInfoDesk As PictureBox
+    Friend WithEvents TbAccountInfo As TabPage
+    Friend WithEvents PbAccount As PictureBox
+    Friend WithEvents LblFullName_AccInfo As Label
+    Friend WithEvents PbPFP_AccInfo As PictureBox
+    Friend WithEvents LblUsername_AccInfo As Label
+    Friend WithEvents LblLRN_AccInfo As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents LblUniqueID_AccInfo As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents BtnChangePFP_AccInfo As Button
+    Friend WithEvents BtnSavePic_PFP As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ProgramToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutTheSystemToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents BtnDeactivateAccount As Button
+    Friend WithEvents BtnOTP_Account As Button
+    Friend WithEvents BtnChangePassword As Button
+    Friend WithEvents BtnSaveEmail_Account As Button
+    Friend WithEvents BtnSaveUsername_Account As Button
+    Friend WithEvents BtnChangeEmail_Account As Button
+    Friend WithEvents BtnChangeUsername As Button
+    Friend WithEvents LblAccountType_Account As Label
+    Friend WithEvents TxtUsername_Account As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents TxtEmail_Account As TextBox
 End Class

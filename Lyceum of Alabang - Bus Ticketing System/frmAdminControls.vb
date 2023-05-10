@@ -1,8 +1,12 @@
 ﻿Imports System.Data.OleDb
+Imports System.Drawing
+Imports System.IO
 
 Public Class frmAdminControls
     Private Sub frmAdminControls_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AdminControlData.CountLCreditCodes(LblCountCodes)
+        AdminControlData.GetVersionNumber(TxtCurrentVersion_SS)
+        AdminControlData.CheckMaintenanceModeInitialize(BtnInitiateMaintenanceMode, LblMaintenanceModeOnOff)
 
         DgvUserList.DataSource = CollectData.UserList_Admin
         DgvBusList.DataSource = AdminControlData.GetBusList
@@ -17,6 +21,7 @@ Public Class frmAdminControls
         Admin_Modify.UserRequestColumns_LC(DgvLoadRequest)
 
         SearchEngine.SearchLRN_Admin(TxtSearchLRN_EditUsers)
+        SearchEngine.SearchFullName_Admin(TxtSearchFullName_Privilege)
     End Sub
 
     Private Sub DgvUserList_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvUserList.CellClick
@@ -67,7 +72,7 @@ Public Class frmAdminControls
                 Dim ImagePath As String = Application.StartupPath & "\frmUserProfilePictures\"
 
                 If System.IO.File.Exists(ImagePath & UserImage) Then
-                    PbProfilePicture.Image = Image.FromFile(ImagePath & UserImage)
+                    PbProfilePicture.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & UserImage)), True, False)
                 Else
                     PbProfilePicture.Image = PbProfilePicture.InitialImage
                 End If
@@ -98,7 +103,8 @@ Public Class frmAdminControls
             BtnChangePfp.Text = "Change"
             Modify.UniversalProfilPictureCheck_Admin(LblUniqueID_EditUser.Text, PbProfilePicture)
         Else
-            Modify.UniversalOpenDialog_Admin(LblUniqueID_EditUser.Text, PbProfilePicture, BtnChangePfp, BtnPicSave)
+            AdminControlData.ProfileChange_Admin(LblUniqueID_EditUser.Text, PbProfilePicture)
+            'Modify.UniversalOpenDialog_Admin(LblUniqueID_EditUser.Text, PbProfilePicture, BtnChangePfp, BtnPicSave)
         End If
     End Sub
 
@@ -110,13 +116,12 @@ Public Class frmAdminControls
 
                 PbProfilePicture.Image.Save(ImagePath & "\" & NewFile, System.Drawing.Imaging.ImageFormat.Jpeg)
 
-                MessageBox.Show("Profile picture saved successfully", "Profile picture change success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Your profile picture has been saved!", "Profile picture changed successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                Modify.UniversalProfilPictureCheck_Admin(LblUniqueID_EditUser.Text, PbProfilePicture)
-
+                Modify.CheckProfilePicture_IfExist(LblUniqueID_EditUser.Text)
                 BtnPicSave.Visible = False
                 BtnChangePfp.Text = "Change"
-                BtnChangePfp.BackColor = Color.Aquamarine
+                BtnChangePfp.BackColor = Color.PaleTurquoise
             End If
         End If
     End Sub
@@ -291,6 +296,18 @@ Public Class frmAdminControls
         TbAdminControlCenter.SelectedTab = TbLoadLCredits
     End Sub
 
+    Private Sub LnkGoToLoadRef_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LnkGoToLoadRef.LinkClicked
+        TbAdminControlCenter.SelectedTab = TbUserReq
+    End Sub
+
+    Private Sub PbTransactionList_Click(sender As Object, e As EventArgs) Handles PbTransactionList.Click
+        frmTransactionHistory_Admin.Show()
+    End Sub
+
+    Private Sub PbSystemSettings_Click(sender As Object, e As EventArgs) Handles PbSystemSettings.Click
+        TbAdminControlCenter.SelectedTab = TbSystemSettings
+    End Sub
+
     Private Sub BtnCreateAccount_Click(sender As Object, e As EventArgs) Handles BtnCreateAccount.Click
         Dim FullUCode As String = "LOA-" & LblUniqueCode_Create.Text
         If MessageBox.Show("The following details will be imported to the database - Full Name: " + TxtFirstName_Create.Text + " " + LblLastName_EditUser.Text + ", born in " + DtpBDay_Create.Text + ", associated with an LRN/ID number " + TxtLRN_Create.Text + ", with a newly generated UniqueID: " +
@@ -444,7 +461,7 @@ Public Class frmAdminControls
                         End If
                     End If
                 End If
-                End If
+            End If
         End If
     End Sub
 
@@ -508,7 +525,7 @@ Public Class frmAdminControls
             Dim ImagePath As String = Application.StartupPath & "\frmUserProfilePictures\"
 
             If System.IO.File.Exists(ImagePath & UserImage) Then
-                PbProfile_ManagePriv.Image = Image.FromFile(ImagePath & UserImage)
+                PbProfile_ManagePriv.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & UserImage)), True, False)
             Else
                 PbProfile_ManagePriv.Image = PbProfile_ManagePriv.InitialImage
             End If
@@ -630,6 +647,8 @@ Public Class frmAdminControls
             BtnFilter_ManagePriv.Text = "ALL"
             BtnFilter_ManagePriv.BackColor = Color.PaleTurquoise
             DgvManagePrivileges.DataSource = AdminControlData.GetUserPrivileges_ALL
+
+            TxtSearchFullName_Privilege.Text = Nothing
 
             Admin_Modify.UserPrivilegeColumns(DgvManagePrivileges)
         End If
@@ -767,7 +786,7 @@ Public Class frmAdminControls
                     Dim ImagePath As String = Application.StartupPath & "\frmUserProfilePictures\"
 
                     If System.IO.File.Exists(ImagePath & UserImage) Then
-                        PbProfilePic_Load.Image = Image.FromFile(ImagePath & UserImage)
+                        PbProfilePic_Load.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & UserImage)), True, False)
                     Else
                         PbProfilePic_Load.Image = PbProfilePic_Load.InitialImage
                     End If
@@ -836,6 +855,7 @@ Public Class frmAdminControls
             If BtnFilter_Req.Text = "L-Credits" Then
                 LblUniqueID_Req.Text = SelectedRow.Cells(0).Value.ToString
                 LblRefNo_Req.Text = SelectedRow.Cells(1).Value.ToString
+                LoadCredits = SelectedRow.Cells(2).Value.ToString
                 LblReqState_Req.Text = "Cash-in (L-Credits)"
 
                 Sql = "SELECT * FROM UserAccounts WHERE UniqueID ='" & SelectedRow.Cells(0).Value.ToString & "'"
@@ -852,6 +872,7 @@ Public Class frmAdminControls
             ElseIf BtnFilter_Req.Text = "Premium" Then
                 LblUniqueID_Req.Text = SelectedRow.Cells(0).Value.ToString
                 LblRefNo_Req.Text = SelectedRow.Cells(1).Value.ToString
+
                 LblReqState_Req.Text = "Premium Membership"
 
                 Sql = "SELECT * FROM UserAccounts WHERE UniqueID ='" & SelectedRow.Cells(0).Value.ToString & "'"
@@ -867,5 +888,162 @@ Public Class frmAdminControls
             End If
 
         End If
+    End Sub
+
+    Shared LoadCredits As String
+
+    Private Sub BtnApproveL_Req_Click(sender As Object, e As EventArgs) Handles BtnApproveL_Req.Click
+        If MessageBox.Show("Do you want to approve " + LblFullName_Req.Text + "'s L-Credit Load Request of " + LoadCredits + "?", "Load Request Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
+            AdminControlData.SendLoadToUser(LblUniqueID_Req.Text, LoadCredits)
+            AdminControlData.Transaction_Import_Load(LblUniqueID_Req.Text, LblUniqueID_Req.Text, LblFullName_Req.Text, LoadCredits, frmModAdminMainMenu.LblLocalServerDate_Time.Text)
+            AdminControlData.DeleteReference(LblUniqueID_Req.Text, LblRefNo_Req.Text, 1)
+            MessageBox.Show("Load sent", "Load sent successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            DgvLoadRequest.DataSource = AdminControlData.GetUserRequest_Load
+            Admin_Modify.UserRequestColumns_LC(DgvLoadRequest)
+            BtnFilter_Req.Text = "L-Credits"
+            BtnFilter_Req.BackColor = Color.PaleTurquoise
+
+            LoadCredits = Nothing
+            PnlButtonLC_Req.Enabled = False
+            PnlButtonP_Req.Enabled = False
+            LblFullName_Req.Text = "Full Name"
+            LblUniqueID_Req.Text = "LOA-XXXXXX"
+            LblRefNo_Req.Text = "---"
+            LblReqState_Req.Text = "0000000000000"
+        End If
+    End Sub
+
+    Private Sub BtnRejectL_Req_Click(sender As Object, e As EventArgs) Handles BtnRejectL_Req.Click
+        If MessageBox.Show("Do you want to decline " + LblFullName_Req.Text + "'s L-Credit Load Request of " + LoadCredits + "?", "Load Decline Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
+            AdminControlData.DeleteReference(LblUniqueID_Req.Text, LblRefNo_Req.Text, 1)
+            Notification.DeniedLCredits(LblUniqueID_Req.Text, LoadCredits, LblRefNo_Req.Text)
+            MessageBox.Show("Load decline", "Load declined successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            DgvLoadRequest.DataSource = AdminControlData.GetUserRequest_Load
+            Admin_Modify.UserRequestColumns_LC(DgvLoadRequest)
+            BtnFilter_Req.Text = "L-Credits"
+            BtnFilter_Req.BackColor = Color.PaleTurquoise
+
+            LoadCredits = Nothing
+            PnlButtonLC_Req.Enabled = False
+            PnlButtonP_Req.Enabled = False
+            LblFullName_Req.Text = "Full Name"
+            LblUniqueID_Req.Text = "LOA-XXXXXX"
+            LblRefNo_Req.Text = "---"
+            LblReqState_Req.Text = "0000000000000"
+        End If
+    End Sub
+
+    Private Sub BtnApproveP_Req_Click(sender As Object, e As EventArgs) Handles BtnApproveP_Req.Click
+        If MessageBox.Show("Do you want to approve " + LblFullName_Req.Text + "'s Premium Membership Request?", "Premium Request Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
+            AdminControlData.DeleteReference(LblUniqueID_Req.Text, LblRefNo_Req.Text, 2)
+            Notification.PremiumMembershipNotif(LblUniqueID_Req.Text)
+            AdminControlData.MakeUser_Premium(LblUniqueID_Req.Text)
+            AdminControlData.Add30Day_Premium(LblUniqueID_Req.Text)
+            MessageBox.Show("Premium membership activated", "User's premium membership has been activated", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            DgvLoadRequest.DataSource = AdminControlData.GetUserRequest_Premium
+            Admin_Modify.UserRequestColumns_PR(DgvLoadRequest)
+            BtnFilter_Req.Text = "L-Credits"
+            BtnFilter_Req.BackColor = Color.PaleTurquoise
+
+            LoadCredits = Nothing
+            PnlButtonLC_Req.Enabled = False
+            PnlButtonP_Req.Enabled = True
+            LblFullName_Req.Text = "Full Name"
+            LblUniqueID_Req.Text = "LOA-XXXXXX"
+            LblRefNo_Req.Text = "---"
+            LblReqState_Req.Text = "0000000000000"
+        End If
+    End Sub
+
+    Private Sub BtnRejectP_Req_Click(sender As Object, e As EventArgs) Handles BtnRejectP_Req.Click
+        If MessageBox.Show("Do you want to decline " + LblFullName_Req.Text + "'s Premium Membership request?", "Premium membership Decline Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
+            AdminControlData.DeleteReference(LblUniqueID_Req.Text, LblRefNo_Req.Text, 2)
+            Notification.DeniedPremiumMembership(LblUniqueID_Req.Text, LblRefNo_Req.Text)
+            MessageBox.Show("User's premium membership has been declined", "Premium Membershi[ declined successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            DgvLoadRequest.DataSource = AdminControlData.GetUserRequest_Premium
+            Admin_Modify.UserRequestColumns_PR(DgvLoadRequest)
+
+            LoadCredits = Nothing
+            PnlButtonLC_Req.Enabled = False
+            PnlButtonP_Req.Enabled = False
+            LblFullName_Req.Text = "Full Name"
+            LblUniqueID_Req.Text = "LOA-XXXXXX"
+            LblRefNo_Req.Text = "---"
+            LblReqState_Req.Text = "0000000000000"
+        End If
+    End Sub
+
+    Private Sub BtnChangeVersionNumber_Click(sender As Object, e As EventArgs) Handles BtnChangeVersionNumber.Click
+        If MessageBox.Show("Do you want to change the version number of the system?", "Confirm version change", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+            AdminControlData.ChangeVersionNumber(TxtCurrentVersion_SS.Text)
+            TxtCurrentVersion_SS.Enabled = False
+            AdminControlData.UpdateVersionNumber(TxtCurrentVersion_SS)
+            MessageBox.Show("System version has been updated", "Version update", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub BtnEditCurrentVersion_Click(sender As Object, e As EventArgs) Handles BtnEditCurrentVersion.Click
+        If BtnEditCurrentVersion.Text = "Change" Then
+            BtnChangeVersionNumber.Visible = True
+            TxtCurrentVersion_SS.Enabled = True
+            BtnEditCurrentVersion.Text = "Back"
+            BtnEditCurrentVersion.BackColor = Color.IndianRed
+        Else
+            BtnEditCurrentVersion.Text = "Change"
+            BtnEditCurrentVersion.BackColor = Color.PaleTurquoise
+            BtnChangeVersionNumber.Visible = False
+            TxtCurrentVersion_SS.Enabled = False
+        End If
+    End Sub
+
+    Private Sub BtnInitiateMaintenanceMode_Click(sender As Object, e As EventArgs) Handles BtnInitiateMaintenanceMode.Click
+        If BtnInitiateMaintenanceMode.Text = "Maintenance Mode ON" Then
+            If MessageBox.Show("Are you sure you want to turn off maintenance mode? Once off, all systems will be online and users will be able to log in and register again. Confirm?", "Confirm initiate", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+                AdminControlData.InitiateMaintenanceMode(False)
+
+                MessageBox.Show("Maintenance mode has been turned off. You will be logged out from this session to refresh the system", "Maintenance mode initiated", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                Me.Close()
+                frmModAdminMainMenu.Close()
+                frmLogin.Show()
+                frmLogin.TxtPassword.Text = Nothing
+            End If
+        ElseIf BtnInitiateMaintenanceMode.Text = "Initiate Maintenance Mode" Then
+
+            If MessageBox.Show("Are you sure you want to initiate maintenance mode. Once initiated, normal users can't access the system. But moderators and administrator may still access the system for changes during maintenance. Continue?", "Confirm initiate", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+                AdminControlData.InitiateMaintenanceMode(True)
+
+                MessageBox.Show("Maintenance mode has been initialized. You will be logged out from this session to refresh the system", "Maintenance mode initiated", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                Me.Close()
+                frmModAdminMainMenu.Close()
+                frmLogin.Show()
+                frmLogin.TxtPassword.Text = Nothing
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnCheckFeedback_Click(sender As Object, e As EventArgs) Handles BtnCheckFeedback.Click
+        frmCheckFeedback.Show()
+    End Sub
+
+    Private Sub TxtSearchFullName_Privilege_TextChanged(sender As Object, e As EventArgs) Handles TxtSearchFullName_Privilege.TextChanged
+        If TxtSearchFullName_Privilege.Text = "" Then
+            BtnFilter_ManagePriv.Text = "ALL"
+            BtnFilter_ManagePriv.BackColor = Color.PaleTurquoise
+            DgvManagePrivileges.DataSource = AdminControlData.GetUserPrivileges_ALL
+        Else
+            DgvManagePrivileges.DataSource = SearchEngine.SearchFullName_Changed(TxtSearchFullName_Privilege)
+        End If
+    End Sub
+
+    Private Sub BtnEnterKiosk_Click(sender As Object, e As EventArgs) Handles BtnEnterKiosk.Click
+        frmConfirmKioskMode.Show()
+        Me.Hide()
+        frmModAdminMainMenu.Hide()
     End Sub
 End Class

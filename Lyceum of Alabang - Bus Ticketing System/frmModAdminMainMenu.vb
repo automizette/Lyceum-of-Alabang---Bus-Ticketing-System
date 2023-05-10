@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.IO
 
 Public Class frmModAdminMainMenu
     Private Sub frmModAdminMainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -23,8 +24,12 @@ Public Class frmModAdminMainMenu
         Modify.BusListDGV(DgvBusList_Admin)
 
         Admin_Modify.CheckUserAccess_MainMenu(LblUniqueID_MainMenu.Text)
+        Admin_Modify.CheckOTPEnable(LblUniqueID_MainMenu.Text)
 
         Authentication.AdministratorPriveleges(LblUsername.Text, LblUniqueID_MainMenu.Text)
+
+        AdminControlData.CheckMod_AdminProfilePic(LblUniqueID_MainMenu.Text, PbInfoDesk)
+        AdminControlData.CheckMod_AdminProfilePic(LblUniqueID_MainMenu.Text, PbPFP_AccInfo)
 
         SearchEngine.CheckLRN(TxtSearchLRN_EditUsers)
     End Sub
@@ -420,7 +425,7 @@ Public Class frmModAdminMainMenu
                 Dim ImagePath As String = Application.StartupPath & "\frmUserProfilePictures\"
 
                 If System.IO.File.Exists(ImagePath & UserImage) Then
-                    PbProfilePicture.Image = Image.FromFile(ImagePath & UserImage)
+                    PbProfilePicture.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & UserImage)), True, False)
                 Else
                     PbProfilePicture.Image = PbProfilePicture.InitialImage
                 End If
@@ -476,5 +481,190 @@ Public Class frmModAdminMainMenu
 
     Private Sub PbAdminSettings_Click(sender As Object, e As EventArgs) Handles PbAdminSettings.Click
         frmAdminControls.Show()
+    End Sub
+
+    Private Sub BtnChangePFP_AccInfo_Click(sender As Object, e As EventArgs) Handles BtnChangePFP_AccInfo.Click
+        If BtnChangePFP_AccInfo.Text = "Remove" Then
+            BtnSavePic_PFP.Visible = False
+            BtnChangePFP_AccInfo.BackColor = Color.PaleTurquoise
+            BtnChangePFP_AccInfo.Text = "Change"
+            AdminControlData.CheckMod_AdminProfilePic(LblUniqueID_MainMenu.Text, PbPFP_AccInfo)
+        Else
+            Modify.UniversalOpenDialog_Admin(LblUniqueID_MainMenu.Text, PbPFP_AccInfo, BtnChangePFP_AccInfo, BtnSavePic_PFP)
+        End If
+    End Sub
+
+    Private Sub BtnSavePic_PFP_Click(sender As Object, e As EventArgs) Handles BtnSavePic_PFP.Click
+        If MessageBox.Show("Before continuing, make sure you profile picture doesn't contain any material that is sensitive or controversial. Do you want to change your profile picture?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+            If PbPFP_AccInfo.Image IsNot Nothing Then
+                Dim ImagePath As String = Application.StartupPath & "\frmUserProfilePictures"
+                Dim NewFile As String = LblUniqueID_MainMenu.Text & ".jpg"
+
+                PbPFP_AccInfo.Image.Save(ImagePath & "\" & NewFile, System.Drawing.Imaging.ImageFormat.Jpeg)
+
+                MessageBox.Show("Your profile picture has been saved!", "Profile picture changed successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                AdminControlData.CheckMod_AdminProfilePic(LblUniqueID_MainMenu.Text, PbInfoDesk)
+                AdminControlData.CheckMod_AdminProfilePic(LblUniqueID_MainMenu.Text, PbPFP_AccInfo)
+                BtnSavePic_PFP.Visible = False
+                BtnChangePFP_AccInfo.Text = "Change"
+                BtnChangePFP_AccInfo.BackColor = Color.PaleTurquoise
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnChangeUsername_Click(sender As Object, e As EventArgs) Handles BtnChangeUsername.Click
+        If BtnChangeUsername.Text = "Change" Then
+            TxtUsername_Account.Enabled = True
+            BtnSaveUsername_Account.Visible = True
+            BtnChangeUsername.Text = "Back"
+            BtnChangeUsername.BackColor = Color.IndianRed
+        Else
+            Sql = "SELECT Username FROM UserAccounts WHERE UniqueID ='" & LblUniqueID_MainMenu.Text & "'"
+            Command = New OleDbCommand(Sql, Connection)
+            DataReader = Command.ExecuteReader
+
+            While DataReader.Read
+                TxtUsername_Account.Text = DataReader("Username")
+            End While
+
+            TxtUsername_Account.Enabled = False
+            BtnSaveUsername_Account.Visible = False
+            BtnChangeUsername.Text = "Change"
+            BtnChangeUsername.BackColor = Color.Plum
+        End If
+    End Sub
+
+    Private Sub BtnSaveUsername_Account_Click(sender As Object, e As EventArgs) Handles BtnSaveUsername_Account.Click
+        If MessageBox.Show("Are you sure you want to change your username from " + LblUsername_AccInfo.Text + " to " + TxtUsername_Account.Text + "?", "Confirm username change", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+            CollectData.UpdateUsername(LblUniqueID_MainMenu.Text, TxtUsername_Account.Text)
+            MessageBox.Show("New username has been applied to your account", "Username change successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            Sql = "SELECT Username FROM UserAccounts WHERE UniqueID ='" & LblUniqueID_MainMenu.Text & "'"
+            Command = New OleDbCommand(Sql, Connection)
+            DataReader = Command.ExecuteReader
+
+            While DataReader.Read
+                LblUsername_AccInfo.Text = DataReader("Username")
+                LblUsername.Text = DataReader("Username")
+                TxtUsername_Account.Text = DataReader("Username")
+            End While
+
+            TxtUsername_Account.Enabled = False
+            BtnSaveUsername_Account.Visible = False
+            BtnChangeUsername.Text = "Change"
+            BtnChangeUsername.BackColor = Color.Plum
+        End If
+    End Sub
+
+    Private Sub BtnChangeEmail_Account_Click(sender As Object, e As EventArgs) Handles BtnChangeEmail_Account.Click
+        Sql = "SELECT OTPEnabled FROM UserAccounts WHERE UniqueID ='" & LblUniqueID_MainMenu.Text & "'"
+        Command = New OleDbCommand(Sql, Connection)
+        DataReader = Command.ExecuteReader
+
+        If BtnChangeEmail_Account.Text = "Back" Then
+            TxtEmail_Account.Enabled = False
+            BtnSaveEmail_Account.Visible = False
+            BtnChangeEmail_Account.Text = "Change"
+            BtnChangeEmail_Account.BackColor = Color.Plum
+        Else
+            While DataReader.Read
+                If DataReader("OTPEnabled") = True Then
+                    If BtnChangeEmail_Account.Text = "Change" Then
+                        frmOTPValidation_Admin.Tag = "CHANGE_EMAIL_ADMIN"
+                        frmOTPValidation_Admin.Show()
+                    Else
+                        Sql = "SELECT EmailAddress FROM UserAccounts WHERE UniqueID ='" & LblUniqueID_MainMenu.Text & "'"
+                        Command = New OleDbCommand(Sql, Connection)
+                        DataReader = Command.ExecuteReader
+
+                        While DataReader.Read
+                            TxtEmail_Account.Text = DataReader("EmailAddress")
+                        End While
+
+                        TxtEmail_Account.Enabled = False
+                        BtnSaveEmail_Account.Visible = False
+                        BtnChangeEmail_Account.Text = "Change"
+                        BtnChangeEmail_Account.BackColor = Color.Plum
+                    End If
+                Else
+                    TxtEmail_Account.Enabled = True
+                    BtnSaveEmail_Account.Visible = True
+                    BtnChangeEmail_Account.Text = "Back"
+                    BtnChangeEmail_Account.BackColor = Color.IndianRed
+                End If
+            End While
+        End If
+    End Sub
+
+    Private Sub BtnSaveEmail_Account_Click(sender As Object, e As EventArgs) Handles BtnSaveEmail_Account.Click
+        If MessageBox.Show("Are you sure you want to change your email to " + TxtUsername_Account.Text + "?", "Confirm email change", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+            CollectData.UpdateEmail(LblUniqueID_MainMenu.Text, TxtEmail_Account.Text)
+            MessageBox.Show("New email addresss has been applied to your account", "Email address change successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            Sql = "SELECT EmailAddress FROM UserAccounts WHERE UniqueID ='" & LblUniqueID_MainMenu.Text & "'"
+            Command = New OleDbCommand(Sql, Connection)
+            DataReader = Command.ExecuteReader
+
+            While DataReader.Read
+                TxtEmail_Account.Text = DataReader("EmailAddress")
+            End While
+
+            TxtEmail_Account.Enabled = False
+            BtnSaveEmail_Account.Visible = False
+            BtnChangeEmail_Account.Text = "Change"
+            BtnChangeEmail_Account.BackColor = Color.Plum
+        End If
+    End Sub
+
+    Private Sub BtnChangePassword_Click(sender As Object, e As EventArgs) Handles BtnChangePassword.Click
+        Sql = "SELECT OTPEnabled FROM UserAccounts WHERE UniqueID ='" & LblUniqueID_MainMenu.Text & "'"
+        Command = New OleDbCommand(Sql, Connection)
+        DataReader = Command.ExecuteReader
+
+        While DataReader.Read
+            If DataReader("OTPEnabled") = True Then
+                frmOTPValidation_Admin.Show()
+                frmOTPValidation_Admin.Tag = "CHANGE_PASSWORD_ADMIN"
+            Else
+                frmChangePassword.Show()
+            End If
+        End While
+    End Sub
+
+    Private Sub BtnOTP_Account_Click(sender As Object, e As EventArgs) Handles BtnOTP_Account.Click
+        If BtnOTP_Account.Text = "OTP Disabled" Then
+            If MessageBox.Show("OTP is your one-time access on changing your credentials, as well as safeguarding your account. Do you want to enable OTP?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
+                frmAddOTP_Admin.Show()
+            End If
+        ElseIf BtnOTP_Account.Text = "OTP Enabled" Then
+            If MessageBox.Show("Your OTP is enabled. If you wish to change your OTP, press Ok", "OTP enabled", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = vbOK Then
+                frmOTPValidation_Admin.Tag = "CHANGE_OTP_ADMIN"
+                frmOTPValidation_Admin.Show()
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnDeactivateAccount_Click(sender As Object, e As EventArgs) Handles BtnDeactivateAccount.Click
+        If MessageBox.Show("Deactivating your account may result to lose your L-Credits, transactions, reservations, and maybe remove you from the account list. If you want to deactivate your account due to security reason, reach out to the admins or send feedback on the 'Send Feedback' page. Deactivate continue?", "Confirm deactivation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+            Sql = "SELECT OTPEnabled FROM UserAccounts WHERE UniqueID ='" & LblUniqueID_MainMenu.Text & "'"
+            Command = New OleDbCommand(Sql, Connection)
+            DataReader = Command.ExecuteReader
+
+            While DataReader.Read
+                If DataReader("OTPEnabled") = True Then
+                    frmOTPValidation_Admin.Show()
+                    frmOTPValidation_Admin.Tag = "DEACTIVATE_ACCOUNT_ADMIN"
+                Else
+                    CollectData.AccountActivation(LblUniqueID_MainMenu.Text, False)
+                    MessageBox.Show("Account has been deactivated. You will be logged out from this session", "Account deactivated successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    frmOTPValidation_Admin.Tag = Nothing
+                End If
+            End While
+        End If
+    End Sub
+
+    Private Sub PbAccount_Click(sender As Object, e As EventArgs) Handles PbAccount.Click
+        TbModAdminCenter.SelectedTab = TbAccountInfo
     End Sub
 End Class

@@ -103,7 +103,7 @@ Partial Class frmSendFeedback
         Me.CmbFeedbackType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbFeedbackType.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbFeedbackType.FormattingEnabled = True
-        Me.CmbFeedbackType.Items.AddRange(New Object() {"Bugs", "Errors", "Suggestions"})
+        Me.CmbFeedbackType.Items.AddRange(New Object() {"Bugs", "Errors", "Transaction", "Suggestions"})
         Me.CmbFeedbackType.Location = New System.Drawing.Point(132, 40)
         Me.CmbFeedbackType.Name = "CmbFeedbackType"
         Me.CmbFeedbackType.Size = New System.Drawing.Size(181, 23)
@@ -111,7 +111,7 @@ Partial Class frmSendFeedback
         '
         'TxtFeedbackDesc
         '
-        Me.TxtFeedbackDesc.Font = New System.Drawing.Font("Raleway", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtFeedbackDesc.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtFeedbackDesc.Location = New System.Drawing.Point(384, 80)
         Me.TxtFeedbackDesc.Multiline = True
         Me.TxtFeedbackDesc.Name = "TxtFeedbackDesc"

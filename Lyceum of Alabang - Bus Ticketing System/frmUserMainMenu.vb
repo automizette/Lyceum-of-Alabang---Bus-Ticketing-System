@@ -479,7 +479,7 @@ Public Class frmUserMainMenu
     Private Sub BtnSaveEmail_Account_Click(sender As Object, e As EventArgs) Handles BtnSaveEmail_Account.Click
         If MessageBox.Show("Are you sure you want to change your email to " + TxtUsername_Account.Text + "?", "Confirm email change", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
             CollectData.UpdateEmail(LblUniqueID_MainMenu.Text, TxtEmail_Account.Text)
-            MessageBox.Show("New email addresss has been applied to your account", "Username change successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("New email addresss has been applied to your account", "Email address change successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Sql = "SELECT EmailAddress FROM UserAccounts WHERE UniqueID ='" & LblUniqueID_MainMenu.Text & "'"
             Command = New OleDbCommand(Sql, Connection)
@@ -568,7 +568,13 @@ Public Class frmUserMainMenu
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
-        MessageBox.Show("Lyceum of Alabang - Bus Ticketing System (Version 2.0.0 - B092381811032). Developed by G1 Technologies.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Sql = "SELECT CurrentVersion FROM SystemSettings"
+        Command = New OleDbCommand(Sql, Connection)
+        DataReader = Command.ExecuteReader
+
+        While DataReader.Read
+            MessageBox.Show("Lyceum of Alabang - Bus Ticketing System (" + DataReader("CurrentVersion") + " . Developed by G1 Technologies.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End While
     End Sub
 
     Private Sub LnkMoreInfo_Premium_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LnkMoreInfo_Premium.LinkClicked

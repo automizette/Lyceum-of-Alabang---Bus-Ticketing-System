@@ -45,6 +45,7 @@
             Authentication.CreateAccount(LblUniqueID.Text, TxtEmailAddress.Text, TxtLrnId.Text, LblFirstName.Text, LblLastName.Text, TxtUsername.Text, TxtPassword.Text, LblBirthdate.Text, LblUserType.Text)
             Authentication.ClearLRNAvailabilityForUser(TxtLrnId.Text)
             Authentication.CreateUserPriveleges(LblUniqueID.Text, TxtUsername.Text)
+            Modify.NewAccountValidation(LblUniqueID.Text)
             MessageBox.Show("Congratulations! Your account has been created. You may now proceed on signing into your account.", "Account created successfully.", MessageBoxButtons.OK, MessageBoxIcon.Information)
             LblLastName.Text = "Last Name"
             LblFirstName.Text = "First Name"

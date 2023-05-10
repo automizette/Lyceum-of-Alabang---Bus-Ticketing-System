@@ -42,6 +42,8 @@ Partial Class frmAdminControls
         Me.TbAdminControlCenter = New System.Windows.Forms.TabControl()
         Me.TbHome = New System.Windows.Forms.TabPage()
         Me.TbManageUsers = New System.Windows.Forms.TabPage()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.Label40 = New System.Windows.Forms.Label()
         Me.BtnSaveInformation = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnChangePassword = New System.Windows.Forms.Button()
@@ -68,6 +70,7 @@ Partial Class frmAdminControls
         Me.Label30 = New System.Windows.Forms.Label()
         Me.DgvUserList = New System.Windows.Forms.DataGridView()
         Me.TbAddUsers = New System.Windows.Forms.TabPage()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnResetAll = New System.Windows.Forms.Button()
@@ -118,6 +121,10 @@ Partial Class frmAdminControls
         Me.DgvBusList = New System.Windows.Forms.DataGridView()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TbManagePrivileges = New System.Windows.Forms.TabPage()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.TxtSearchFullName_Privilege = New System.Windows.Forms.TextBox()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.BtnFilter_ManagePriv = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -136,6 +143,8 @@ Partial Class frmAdminControls
         Me.BtnDemote_ManagePriv = New System.Windows.Forms.Button()
         Me.DgvManagePrivileges = New System.Windows.Forms.DataGridView()
         Me.TbAddLCredits = New System.Windows.Forms.TabPage()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.BtnDeleteCode = New System.Windows.Forms.Button()
         Me.BtnAddLCreditCode = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -159,6 +168,7 @@ Partial Class frmAdminControls
         Me.LblCountCodes = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TbLoadLCredits = New System.Windows.Forms.TabPage()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.LnkGoToLoadRef = New System.Windows.Forms.LinkLabel()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.PnlLoadInfo = New System.Windows.Forms.Panel()
@@ -178,28 +188,44 @@ Partial Class frmAdminControls
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.TbUserReq = New System.Windows.Forms.TabPage()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.LblRefNo_Req = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.LblReqState_Req = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.LblUniqueID_Req = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.LblFullName_Req = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
         Me.BtnFilter_Req = New System.Windows.Forms.Button()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.DgvLoadRequest = New System.Windows.Forms.DataGridView()
+        Me.PnlButtonP_Req = New System.Windows.Forms.Panel()
+        Me.BtnRejectP_Req = New System.Windows.Forms.Button()
+        Me.BtnApproveP_Req = New System.Windows.Forms.Button()
+        Me.PnlButtonLC_Req = New System.Windows.Forms.Panel()
+        Me.BtnRejectL_Req = New System.Windows.Forms.Button()
+        Me.BtnApproveL_Req = New System.Windows.Forms.Button()
+        Me.TbSystemSettings = New System.Windows.Forms.TabPage()
+        Me.LblMaintenanceModeOnOff = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.BtnEditCurrentVersion = New System.Windows.Forms.Button()
+        Me.BtnChangeVersionNumber = New System.Windows.Forms.Button()
+        Me.BtnCheckFeedback = New System.Windows.Forms.Button()
+        Me.BtnEnterKiosk = New System.Windows.Forms.Button()
+        Me.BtnInitiateMaintenanceMode = New System.Windows.Forms.Button()
+        Me.TxtCurrentVersion_SS = New System.Windows.Forms.TextBox()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Label37 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PbAddLCredits = New System.Windows.Forms.PictureBox()
         Me.PbLoadLCredits = New System.Windows.Forms.PictureBox()
         Me.PbManagePrivileges = New System.Windows.Forms.PictureBox()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.LblFullName_Req = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.LblUniqueID_Req = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.LblReqState_Req = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.LblRefNo_Req = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.PnlButtonP_Req = New System.Windows.Forms.Panel()
-        Me.PnlButtonLC_Req = New System.Windows.Forms.Panel()
         CType(Me.PbAddUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbManageUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbManageBus, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,10 +233,12 @@ Partial Class frmAdminControls
         CType(Me.PbSystemSettings, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TbAdminControlCenter.SuspendLayout()
         Me.TbManageUsers.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PbProfilePicture, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvUserList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TbAddUsers.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GrpAccType.SuspendLayout()
@@ -221,11 +249,13 @@ Partial Class frmAdminControls
         Me.GrpBusInformation.SuspendLayout()
         CType(Me.DgvBusList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TbManagePrivileges.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PbProfile_ManagePriv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlButtons_ManagePriv.SuspendLayout()
         CType(Me.DgvManagePrivileges, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TbAddLCredits.SuspendLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
         CType(Me.PbShowCode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -233,18 +263,22 @@ Partial Class frmAdminControls
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvLCreditCodes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TbLoadLCredits.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
         Me.PnlLoadInfo.SuspendLayout()
         CType(Me.PbProfilePic_Load, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TbUserReq.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         CType(Me.DgvLoadRequest, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlButtonP_Req.SuspendLayout()
+        Me.PnlButtonLC_Req.SuspendLayout()
+        Me.TbSystemSettings.SuspendLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PbAddLCredits, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLoadLCredits, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbManagePrivileges, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox7.SuspendLayout()
-        Me.PnlButtonP_Req.SuspendLayout()
-        Me.PnlButtonLC_Req.SuspendLayout()
         Me.SuspendLayout()
         '
         'PbAddUser
@@ -322,10 +356,11 @@ Partial Class frmAdminControls
         Me.TbAdminControlCenter.Controls.Add(Me.TbAddLCredits)
         Me.TbAdminControlCenter.Controls.Add(Me.TbLoadLCredits)
         Me.TbAdminControlCenter.Controls.Add(Me.TbUserReq)
-        Me.TbAdminControlCenter.Location = New System.Drawing.Point(3, -6)
+        Me.TbAdminControlCenter.Controls.Add(Me.TbSystemSettings)
+        Me.TbAdminControlCenter.Location = New System.Drawing.Point(3, -17)
         Me.TbAdminControlCenter.Name = "TbAdminControlCenter"
         Me.TbAdminControlCenter.SelectedIndex = 0
-        Me.TbAdminControlCenter.Size = New System.Drawing.Size(806, 456)
+        Me.TbAdminControlCenter.Size = New System.Drawing.Size(806, 467)
         Me.TbAdminControlCenter.TabIndex = 6
         '
         'TbHome
@@ -334,7 +369,7 @@ Partial Class frmAdminControls
         Me.TbHome.Location = New System.Drawing.Point(4, 23)
         Me.TbHome.Name = "TbHome"
         Me.TbHome.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbHome.Size = New System.Drawing.Size(798, 429)
+        Me.TbHome.Size = New System.Drawing.Size(798, 440)
         Me.TbHome.TabIndex = 0
         Me.TbHome.Text = "Home"
         Me.TbHome.UseVisualStyleBackColor = True
@@ -342,6 +377,8 @@ Partial Class frmAdminControls
         'TbManageUsers
         '
         Me.TbManageUsers.BackgroundImage = CType(resources.GetObject("TbManageUsers.BackgroundImage"), System.Drawing.Image)
+        Me.TbManageUsers.Controls.Add(Me.PictureBox7)
+        Me.TbManageUsers.Controls.Add(Me.Label40)
         Me.TbManageUsers.Controls.Add(Me.BtnSaveInformation)
         Me.TbManageUsers.Controls.Add(Me.GroupBox1)
         Me.TbManageUsers.Controls.Add(Me.TxtSearchLRN_EditUsers)
@@ -350,10 +387,34 @@ Partial Class frmAdminControls
         Me.TbManageUsers.Location = New System.Drawing.Point(4, 23)
         Me.TbManageUsers.Name = "TbManageUsers"
         Me.TbManageUsers.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbManageUsers.Size = New System.Drawing.Size(798, 429)
+        Me.TbManageUsers.Size = New System.Drawing.Size(798, 440)
         Me.TbManageUsers.TabIndex = 1
         Me.TbManageUsers.Text = "Manage Users"
         Me.TbManageUsers.UseVisualStyleBackColor = True
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox7.Enabled = False
+        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+        Me.PictureBox7.InitialImage = CType(resources.GetObject("PictureBox7.InitialImage"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(8, 3)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(31, 36)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 11
+        Me.PictureBox7.TabStop = False
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Raleway ExtraBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.ForeColor = System.Drawing.Color.White
+        Me.Label40.Location = New System.Drawing.Point(42, 9)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(155, 25)
+        Me.Label40.TabIndex = 37
+        Me.Label40.Text = "Manage Users"
         '
         'BtnSaveInformation
         '
@@ -363,7 +424,7 @@ Partial Class frmAdminControls
         Me.BtnSaveInformation.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSaveInformation.Location = New System.Drawing.Point(371, 388)
         Me.BtnSaveInformation.Name = "BtnSaveInformation"
-        Me.BtnSaveInformation.Size = New System.Drawing.Size(103, 29)
+        Me.BtnSaveInformation.Size = New System.Drawing.Size(103, 37)
         Me.BtnSaveInformation.TabIndex = 36
         Me.BtnSaveInformation.Text = "Save"
         Me.BtnSaveInformation.UseVisualStyleBackColor = False
@@ -622,7 +683,7 @@ Partial Class frmAdminControls
         'TxtSearchLRN_EditUsers
         '
         Me.TxtSearchLRN_EditUsers.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSearchLRN_EditUsers.Location = New System.Drawing.Point(125, 10)
+        Me.TxtSearchLRN_EditUsers.Location = New System.Drawing.Point(126, 42)
         Me.TxtSearchLRN_EditUsers.Name = "TxtSearchLRN_EditUsers"
         Me.TxtSearchLRN_EditUsers.Size = New System.Drawing.Size(240, 25)
         Me.TxtSearchLRN_EditUsers.TabIndex = 5
@@ -632,7 +693,7 @@ Partial Class frmAdminControls
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.White
-        Me.Label30.Location = New System.Drawing.Point(8, 16)
+        Me.Label30.Location = New System.Drawing.Point(7, 50)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(110, 15)
         Me.Label30.TabIndex = 4
@@ -662,27 +723,41 @@ Partial Class frmAdminControls
         Me.DgvUserList.DefaultCellStyle = DataGridViewCellStyle2
         Me.DgvUserList.EnableHeadersVisualStyles = False
         Me.DgvUserList.GridColor = System.Drawing.Color.Black
-        Me.DgvUserList.Location = New System.Drawing.Point(6, 45)
+        Me.DgvUserList.Location = New System.Drawing.Point(6, 72)
         Me.DgvUserList.MultiSelect = False
         Me.DgvUserList.Name = "DgvUserList"
         Me.DgvUserList.ReadOnly = True
         Me.DgvUserList.RowHeadersVisible = False
         Me.DgvUserList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvUserList.Size = New System.Drawing.Size(359, 372)
+        Me.DgvUserList.Size = New System.Drawing.Size(359, 356)
         Me.DgvUserList.TabIndex = 2
         '
         'TbAddUsers
         '
         Me.TbAddUsers.BackgroundImage = CType(resources.GetObject("TbAddUsers.BackgroundImage"), System.Drawing.Image)
+        Me.TbAddUsers.Controls.Add(Me.PictureBox6)
         Me.TbAddUsers.Controls.Add(Me.Panel2)
         Me.TbAddUsers.Controls.Add(Me.Label2)
         Me.TbAddUsers.Location = New System.Drawing.Point(4, 23)
         Me.TbAddUsers.Name = "TbAddUsers"
         Me.TbAddUsers.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbAddUsers.Size = New System.Drawing.Size(798, 429)
+        Me.TbAddUsers.Size = New System.Drawing.Size(798, 440)
         Me.TbAddUsers.TabIndex = 2
         Me.TbAddUsers.Text = "Add Users"
         Me.TbAddUsers.UseVisualStyleBackColor = True
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.Enabled = False
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.InitialImage = CType(resources.GetObject("PictureBox6.InitialImage"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(14, 12)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(31, 36)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 11
+        Me.PictureBox6.TabStop = False
         '
         'Panel2
         '
@@ -980,7 +1055,7 @@ Partial Class frmAdminControls
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Raleway ExtraBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(13, 14)
+        Me.Label2.Location = New System.Drawing.Point(53, 18)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(203, 25)
         Me.Label2.TabIndex = 0
@@ -999,7 +1074,7 @@ Partial Class frmAdminControls
         Me.TbManageBus.Location = New System.Drawing.Point(4, 23)
         Me.TbManageBus.Name = "TbManageBus"
         Me.TbManageBus.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbManageBus.Size = New System.Drawing.Size(798, 429)
+        Me.TbManageBus.Size = New System.Drawing.Size(798, 440)
         Me.TbManageBus.TabIndex = 3
         Me.TbManageBus.Text = "Add/Manage Bus"
         Me.TbManageBus.UseVisualStyleBackColor = True
@@ -1273,7 +1348,7 @@ Partial Class frmAdminControls
         Me.DgvBusList.RowHeadersVisible = False
         Me.DgvBusList.RowTemplate.Height = 28
         Me.DgvBusList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvBusList.Size = New System.Drawing.Size(359, 372)
+        Me.DgvBusList.Size = New System.Drawing.Size(359, 380)
         Me.DgvBusList.TabIndex = 3
         '
         'Label10
@@ -1290,6 +1365,10 @@ Partial Class frmAdminControls
         'TbManagePrivileges
         '
         Me.TbManagePrivileges.BackgroundImage = CType(resources.GetObject("TbManagePrivileges.BackgroundImage"), System.Drawing.Image)
+        Me.TbManagePrivileges.Controls.Add(Me.Label50)
+        Me.TbManagePrivileges.Controls.Add(Me.TxtSearchFullName_Privilege)
+        Me.TbManagePrivileges.Controls.Add(Me.Label44)
+        Me.TbManagePrivileges.Controls.Add(Me.PictureBox8)
         Me.TbManagePrivileges.Controls.Add(Me.Label18)
         Me.TbManagePrivileges.Controls.Add(Me.BtnFilter_ManagePriv)
         Me.TbManagePrivileges.Controls.Add(Me.GroupBox2)
@@ -1297,10 +1376,52 @@ Partial Class frmAdminControls
         Me.TbManagePrivileges.Location = New System.Drawing.Point(4, 23)
         Me.TbManagePrivileges.Name = "TbManagePrivileges"
         Me.TbManagePrivileges.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbManagePrivileges.Size = New System.Drawing.Size(798, 429)
+        Me.TbManagePrivileges.Size = New System.Drawing.Size(798, 440)
         Me.TbManagePrivileges.TabIndex = 4
         Me.TbManagePrivileges.Text = "Manage Privileges"
         Me.TbManagePrivileges.UseVisualStyleBackColor = True
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Raleway Medium", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label50.ForeColor = System.Drawing.Color.White
+        Me.Label50.Location = New System.Drawing.Point(286, 14)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(49, 13)
+        Me.Label50.TabIndex = 16
+        Me.Label50.Text = "Search"
+        '
+        'TxtSearchFullName_Privilege
+        '
+        Me.TxtSearchFullName_Privilege.Location = New System.Drawing.Point(345, 9)
+        Me.TxtSearchFullName_Privilege.Name = "TxtSearchFullName_Privilege"
+        Me.TxtSearchFullName_Privilege.Size = New System.Drawing.Size(243, 22)
+        Me.TxtSearchFullName_Privilege.TabIndex = 15
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Raleway ExtraBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.ForeColor = System.Drawing.Color.White
+        Me.Label44.Location = New System.Drawing.Point(42, 8)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(199, 25)
+        Me.Label44.TabIndex = 14
+        Me.Label44.Text = "Manage Privileges"
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox8.Enabled = False
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.InitialImage = CType(resources.GetObject("PictureBox8.InitialImage"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(9, 5)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(29, 29)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 11
+        Me.PictureBox8.TabStop = False
         '
         'Label18
         '
@@ -1340,7 +1461,7 @@ Partial Class frmAdminControls
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(6, 309)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(786, 115)
+        Me.GroupBox2.Size = New System.Drawing.Size(786, 124)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "User Information"
@@ -1432,9 +1553,9 @@ Partial Class frmAdminControls
         Me.PnlButtons_ManagePriv.Controls.Add(Me.BtnPromoteMod_ManagePriv)
         Me.PnlButtons_ManagePriv.Controls.Add(Me.BtnDemote_ManagePriv)
         Me.PnlButtons_ManagePriv.Enabled = False
-        Me.PnlButtons_ManagePriv.Location = New System.Drawing.Point(352, 12)
+        Me.PnlButtons_ManagePriv.Location = New System.Drawing.Point(327, 12)
         Me.PnlButtons_ManagePriv.Name = "PnlButtons_ManagePriv"
-        Me.PnlButtons_ManagePriv.Size = New System.Drawing.Size(429, 97)
+        Me.PnlButtons_ManagePriv.Size = New System.Drawing.Size(454, 106)
         Me.PnlButtons_ManagePriv.TabIndex = 12
         '
         'BtnPromoteAdmin_ManagePriv
@@ -1442,9 +1563,9 @@ Partial Class frmAdminControls
         Me.BtnPromoteAdmin_ManagePriv.BackColor = System.Drawing.Color.LightBlue
         Me.BtnPromoteAdmin_ManagePriv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPromoteAdmin_ManagePriv.ForeColor = System.Drawing.Color.Black
-        Me.BtnPromoteAdmin_ManagePriv.Location = New System.Drawing.Point(38, 6)
+        Me.BtnPromoteAdmin_ManagePriv.Location = New System.Drawing.Point(3, 6)
         Me.BtnPromoteAdmin_ManagePriv.Name = "BtnPromoteAdmin_ManagePriv"
-        Me.BtnPromoteAdmin_ManagePriv.Size = New System.Drawing.Size(118, 28)
+        Me.BtnPromoteAdmin_ManagePriv.Size = New System.Drawing.Size(140, 28)
         Me.BtnPromoteAdmin_ManagePriv.TabIndex = 10
         Me.BtnPromoteAdmin_ManagePriv.Text = "Promote to Admin"
         Me.BtnPromoteAdmin_ManagePriv.UseVisualStyleBackColor = False
@@ -1456,7 +1577,7 @@ Partial Class frmAdminControls
         Me.BtnUpdatePriv.ForeColor = System.Drawing.Color.Black
         Me.BtnUpdatePriv.Location = New System.Drawing.Point(310, 40)
         Me.BtnUpdatePriv.Name = "BtnUpdatePriv"
-        Me.BtnUpdatePriv.Size = New System.Drawing.Size(118, 28)
+        Me.BtnUpdatePriv.Size = New System.Drawing.Size(137, 28)
         Me.BtnUpdatePriv.TabIndex = 11
         Me.BtnUpdatePriv.Text = "Update Privileges"
         Me.BtnUpdatePriv.UseVisualStyleBackColor = False
@@ -1466,9 +1587,9 @@ Partial Class frmAdminControls
         Me.BtnPromoteMod_ManagePriv.BackColor = System.Drawing.Color.CadetBlue
         Me.BtnPromoteMod_ManagePriv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPromoteMod_ManagePriv.ForeColor = System.Drawing.Color.Black
-        Me.BtnPromoteMod_ManagePriv.Location = New System.Drawing.Point(162, 6)
+        Me.BtnPromoteMod_ManagePriv.Location = New System.Drawing.Point(149, 6)
         Me.BtnPromoteMod_ManagePriv.Name = "BtnPromoteMod_ManagePriv"
-        Me.BtnPromoteMod_ManagePriv.Size = New System.Drawing.Size(142, 28)
+        Me.BtnPromoteMod_ManagePriv.Size = New System.Drawing.Size(155, 28)
         Me.BtnPromoteMod_ManagePriv.TabIndex = 8
         Me.BtnPromoteMod_ManagePriv.Text = "Promote to Moderator"
         Me.BtnPromoteMod_ManagePriv.UseVisualStyleBackColor = False
@@ -1480,7 +1601,7 @@ Partial Class frmAdminControls
         Me.BtnDemote_ManagePriv.ForeColor = System.Drawing.Color.Black
         Me.BtnDemote_ManagePriv.Location = New System.Drawing.Point(310, 6)
         Me.BtnDemote_ManagePriv.Name = "BtnDemote_ManagePriv"
-        Me.BtnDemote_ManagePriv.Size = New System.Drawing.Size(116, 28)
+        Me.BtnDemote_ManagePriv.Size = New System.Drawing.Size(137, 28)
         Me.BtnDemote_ManagePriv.TabIndex = 9
         Me.BtnDemote_ManagePriv.Text = "Demote to Normal"
         Me.BtnDemote_ManagePriv.UseVisualStyleBackColor = False
@@ -1527,6 +1648,8 @@ Partial Class frmAdminControls
         'TbAddLCredits
         '
         Me.TbAddLCredits.BackgroundImage = CType(resources.GetObject("TbAddLCredits.BackgroundImage"), System.Drawing.Image)
+        Me.TbAddLCredits.Controls.Add(Me.Label48)
+        Me.TbAddLCredits.Controls.Add(Me.PictureBox9)
         Me.TbAddLCredits.Controls.Add(Me.BtnDeleteCode)
         Me.TbAddLCredits.Controls.Add(Me.BtnAddLCreditCode)
         Me.TbAddLCredits.Controls.Add(Me.GroupBox5)
@@ -1537,10 +1660,34 @@ Partial Class frmAdminControls
         Me.TbAddLCredits.Location = New System.Drawing.Point(4, 23)
         Me.TbAddLCredits.Name = "TbAddLCredits"
         Me.TbAddLCredits.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbAddLCredits.Size = New System.Drawing.Size(798, 429)
+        Me.TbAddLCredits.Size = New System.Drawing.Size(798, 440)
         Me.TbAddLCredits.TabIndex = 5
         Me.TbAddLCredits.Text = "Add Code"
         Me.TbAddLCredits.UseVisualStyleBackColor = True
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Font = New System.Drawing.Font("Raleway ExtraBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.ForeColor = System.Drawing.Color.White
+        Me.Label48.Location = New System.Drawing.Point(45, 12)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(209, 25)
+        Me.Label48.TabIndex = 15
+        Me.Label48.Text = "Add L-Credit Codes"
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox9.Enabled = False
+        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
+        Me.PictureBox9.InitialImage = CType(resources.GetObject("PictureBox9.InitialImage"), System.Drawing.Image)
+        Me.PictureBox9.Location = New System.Drawing.Point(8, 7)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(33, 34)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox9.TabIndex = 11
+        Me.PictureBox9.TabStop = False
         '
         'BtnDeleteCode
         '
@@ -1801,7 +1948,7 @@ Partial Class frmAdminControls
         Me.DgvLCreditCodes.RowHeadersVisible = False
         Me.DgvLCreditCodes.RowTemplate.Height = 25
         Me.DgvLCreditCodes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvLCreditCodes.Size = New System.Drawing.Size(330, 378)
+        Me.DgvLCreditCodes.Size = New System.Drawing.Size(330, 385)
         Me.DgvLCreditCodes.TabIndex = 4
         '
         'LblCountCodes
@@ -1809,7 +1956,7 @@ Partial Class frmAdminControls
         Me.LblCountCodes.AutoSize = True
         Me.LblCountCodes.Font = New System.Drawing.Font("Raleway ExtraBold", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCountCodes.ForeColor = System.Drawing.Color.White
-        Me.LblCountCodes.Location = New System.Drawing.Point(250, 14)
+        Me.LblCountCodes.Location = New System.Drawing.Point(585, 392)
         Me.LblCountCodes.Name = "LblCountCodes"
         Me.LblCountCodes.Size = New System.Drawing.Size(30, 31)
         Me.LblCountCodes.TabIndex = 2
@@ -1820,7 +1967,7 @@ Partial Class frmAdminControls
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Raleway ExtraBold", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.White
-        Me.Label21.Location = New System.Drawing.Point(11, 19)
+        Me.Label21.Location = New System.Drawing.Point(343, 397)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(242, 22)
         Me.Label21.TabIndex = 1
@@ -1829,16 +1976,30 @@ Partial Class frmAdminControls
         'TbLoadLCredits
         '
         Me.TbLoadLCredits.BackgroundImage = CType(resources.GetObject("TbLoadLCredits.BackgroundImage"), System.Drawing.Image)
+        Me.TbLoadLCredits.Controls.Add(Me.PictureBox10)
         Me.TbLoadLCredits.Controls.Add(Me.LnkGoToLoadRef)
         Me.TbLoadLCredits.Controls.Add(Me.GroupBox6)
         Me.TbLoadLCredits.Controls.Add(Me.Label28)
         Me.TbLoadLCredits.Location = New System.Drawing.Point(4, 23)
         Me.TbLoadLCredits.Name = "TbLoadLCredits"
         Me.TbLoadLCredits.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbLoadLCredits.Size = New System.Drawing.Size(798, 429)
+        Me.TbLoadLCredits.Size = New System.Drawing.Size(798, 440)
         Me.TbLoadLCredits.TabIndex = 6
         Me.TbLoadLCredits.Text = "Load Credits"
         Me.TbLoadLCredits.UseVisualStyleBackColor = True
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox10.Enabled = False
+        Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
+        Me.PictureBox10.InitialImage = CType(resources.GetObject("PictureBox10.InitialImage"), System.Drawing.Image)
+        Me.PictureBox10.Location = New System.Drawing.Point(12, 8)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(47, 44)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox10.TabIndex = 11
+        Me.PictureBox10.TabStop = False
         '
         'LnkGoToLoadRef
         '
@@ -2047,7 +2208,7 @@ Partial Class frmAdminControls
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Raleway Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.White
-        Me.Label28.Location = New System.Drawing.Point(296, 13)
+        Me.Label28.Location = New System.Drawing.Point(64, 15)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(197, 31)
         Me.Label28.TabIndex = 2
@@ -2065,10 +2226,116 @@ Partial Class frmAdminControls
         Me.TbUserReq.Location = New System.Drawing.Point(4, 23)
         Me.TbUserReq.Name = "TbUserReq"
         Me.TbUserReq.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbUserReq.Size = New System.Drawing.Size(798, 429)
+        Me.TbUserReq.Size = New System.Drawing.Size(798, 440)
         Me.TbUserReq.TabIndex = 7
         Me.TbUserReq.Text = "Load/Prem Req"
         Me.TbUserReq.UseVisualStyleBackColor = True
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.LblRefNo_Req)
+        Me.GroupBox7.Controls.Add(Me.Label46)
+        Me.GroupBox7.Controls.Add(Me.LblReqState_Req)
+        Me.GroupBox7.Controls.Add(Me.Label42)
+        Me.GroupBox7.Controls.Add(Me.LblUniqueID_Req)
+        Me.GroupBox7.Controls.Add(Me.Label38)
+        Me.GroupBox7.Controls.Add(Me.LblFullName_Req)
+        Me.GroupBox7.Controls.Add(Me.Label35)
+        Me.GroupBox7.ForeColor = System.Drawing.Color.White
+        Me.GroupBox7.Location = New System.Drawing.Point(493, 20)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(291, 229)
+        Me.GroupBox7.TabIndex = 11
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Request Information"
+        '
+        'LblRefNo_Req
+        '
+        Me.LblRefNo_Req.AutoSize = True
+        Me.LblRefNo_Req.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblRefNo_Req.ForeColor = System.Drawing.Color.White
+        Me.LblRefNo_Req.Location = New System.Drawing.Point(17, 202)
+        Me.LblRefNo_Req.Name = "LblRefNo_Req"
+        Me.LblRefNo_Req.Size = New System.Drawing.Size(98, 14)
+        Me.LblRefNo_Req.TabIndex = 19
+        Me.LblRefNo_Req.Text = "0000000000000"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.ForeColor = System.Drawing.Color.White
+        Me.Label46.Location = New System.Drawing.Point(16, 187)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(51, 14)
+        Me.Label46.TabIndex = 18
+        Me.Label46.Text = "Ref. No.:"
+        '
+        'LblReqState_Req
+        '
+        Me.LblReqState_Req.AutoSize = True
+        Me.LblReqState_Req.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblReqState_Req.ForeColor = System.Drawing.Color.White
+        Me.LblReqState_Req.Location = New System.Drawing.Point(17, 139)
+        Me.LblReqState_Req.Name = "LblReqState_Req"
+        Me.LblReqState_Req.Size = New System.Drawing.Size(26, 18)
+        Me.LblReqState_Req.TabIndex = 17
+        Me.LblReqState_Req.Text = "---"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.ForeColor = System.Drawing.Color.White
+        Me.Label42.Location = New System.Drawing.Point(16, 124)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(90, 14)
+        Me.Label42.TabIndex = 16
+        Me.Label42.Text = "Requesting for:"
+        '
+        'LblUniqueID_Req
+        '
+        Me.LblUniqueID_Req.AutoSize = True
+        Me.LblUniqueID_Req.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUniqueID_Req.ForeColor = System.Drawing.Color.White
+        Me.LblUniqueID_Req.Location = New System.Drawing.Point(16, 91)
+        Me.LblUniqueID_Req.Name = "LblUniqueID_Req"
+        Me.LblUniqueID_Req.Size = New System.Drawing.Size(103, 18)
+        Me.LblUniqueID_Req.TabIndex = 15
+        Me.LblUniqueID_Req.Text = "LOA-XXXXXX"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.Color.White
+        Me.Label38.Location = New System.Drawing.Point(16, 75)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(61, 14)
+        Me.Label38.TabIndex = 14
+        Me.Label38.Text = "UniqueID:"
+        '
+        'LblFullName_Req
+        '
+        Me.LblFullName_Req.AutoSize = True
+        Me.LblFullName_Req.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFullName_Req.ForeColor = System.Drawing.Color.White
+        Me.LblFullName_Req.Location = New System.Drawing.Point(16, 46)
+        Me.LblFullName_Req.Name = "LblFullName_Req"
+        Me.LblFullName_Req.Size = New System.Drawing.Size(82, 18)
+        Me.LblFullName_Req.TabIndex = 13
+        Me.LblFullName_Req.Text = "Full Name"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.ForeColor = System.Drawing.Color.White
+        Me.Label35.Location = New System.Drawing.Point(16, 27)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(107, 14)
+        Me.Label35.TabIndex = 12
+        Me.Label35.Text = "Recipient's Name:"
         '
         'BtnFilter_Req
         '
@@ -2111,7 +2378,7 @@ Partial Class frmAdminControls
         Me.DgvLoadRequest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle11.BackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Azure
         DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Azure
         DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.MidnightBlue
@@ -2125,8 +2392,281 @@ Partial Class frmAdminControls
         Me.DgvLoadRequest.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DgvLoadRequest.RowTemplate.Height = 25
         Me.DgvLoadRequest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvLoadRequest.Size = New System.Drawing.Size(473, 381)
+        Me.DgvLoadRequest.Size = New System.Drawing.Size(473, 387)
         Me.DgvLoadRequest.TabIndex = 5
+        '
+        'PnlButtonP_Req
+        '
+        Me.PnlButtonP_Req.Controls.Add(Me.BtnRejectP_Req)
+        Me.PnlButtonP_Req.Controls.Add(Me.BtnApproveP_Req)
+        Me.PnlButtonP_Req.Enabled = False
+        Me.PnlButtonP_Req.Location = New System.Drawing.Point(485, 315)
+        Me.PnlButtonP_Req.Name = "PnlButtonP_Req"
+        Me.PnlButtonP_Req.Size = New System.Drawing.Size(308, 56)
+        Me.PnlButtonP_Req.TabIndex = 16
+        '
+        'BtnRejectP_Req
+        '
+        Me.BtnRejectP_Req.BackColor = System.Drawing.Color.IndianRed
+        Me.BtnRejectP_Req.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRejectP_Req.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRejectP_Req.ForeColor = System.Drawing.Color.Black
+        Me.BtnRejectP_Req.Location = New System.Drawing.Point(157, 9)
+        Me.BtnRejectP_Req.Name = "BtnRejectP_Req"
+        Me.BtnRejectP_Req.Size = New System.Drawing.Size(142, 42)
+        Me.BtnRejectP_Req.TabIndex = 15
+        Me.BtnRejectP_Req.Text = "Reject (Premium)"
+        Me.BtnRejectP_Req.UseVisualStyleBackColor = False
+        '
+        'BtnApproveP_Req
+        '
+        Me.BtnApproveP_Req.BackColor = System.Drawing.Color.SpringGreen
+        Me.BtnApproveP_Req.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnApproveP_Req.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnApproveP_Req.ForeColor = System.Drawing.Color.Black
+        Me.BtnApproveP_Req.Location = New System.Drawing.Point(8, 9)
+        Me.BtnApproveP_Req.Name = "BtnApproveP_Req"
+        Me.BtnApproveP_Req.Size = New System.Drawing.Size(144, 42)
+        Me.BtnApproveP_Req.TabIndex = 14
+        Me.BtnApproveP_Req.Text = "APPROVE (Premium)"
+        Me.BtnApproveP_Req.UseVisualStyleBackColor = False
+        '
+        'PnlButtonLC_Req
+        '
+        Me.PnlButtonLC_Req.Controls.Add(Me.BtnRejectL_Req)
+        Me.PnlButtonLC_Req.Controls.Add(Me.BtnApproveL_Req)
+        Me.PnlButtonLC_Req.Enabled = False
+        Me.PnlButtonLC_Req.Location = New System.Drawing.Point(485, 250)
+        Me.PnlButtonLC_Req.Name = "PnlButtonLC_Req"
+        Me.PnlButtonLC_Req.Size = New System.Drawing.Size(307, 58)
+        Me.PnlButtonLC_Req.TabIndex = 17
+        '
+        'BtnRejectL_Req
+        '
+        Me.BtnRejectL_Req.BackColor = System.Drawing.Color.IndianRed
+        Me.BtnRejectL_Req.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRejectL_Req.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRejectL_Req.ForeColor = System.Drawing.Color.Black
+        Me.BtnRejectL_Req.Location = New System.Drawing.Point(157, 5)
+        Me.BtnRejectL_Req.Name = "BtnRejectL_Req"
+        Me.BtnRejectL_Req.Size = New System.Drawing.Size(142, 42)
+        Me.BtnRejectL_Req.TabIndex = 13
+        Me.BtnRejectL_Req.Text = "Reject (Send L-Credits)"
+        Me.BtnRejectL_Req.UseVisualStyleBackColor = False
+        '
+        'BtnApproveL_Req
+        '
+        Me.BtnApproveL_Req.BackColor = System.Drawing.Color.SpringGreen
+        Me.BtnApproveL_Req.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnApproveL_Req.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnApproveL_Req.ForeColor = System.Drawing.Color.Black
+        Me.BtnApproveL_Req.Location = New System.Drawing.Point(8, 5)
+        Me.BtnApproveL_Req.Name = "BtnApproveL_Req"
+        Me.BtnApproveL_Req.Size = New System.Drawing.Size(144, 42)
+        Me.BtnApproveL_Req.TabIndex = 12
+        Me.BtnApproveL_Req.Text = "APPROVE (Send L-Credits)"
+        Me.BtnApproveL_Req.UseVisualStyleBackColor = False
+        '
+        'TbSystemSettings
+        '
+        Me.TbSystemSettings.BackgroundImage = CType(resources.GetObject("TbSystemSettings.BackgroundImage"), System.Drawing.Image)
+        Me.TbSystemSettings.Controls.Add(Me.LblMaintenanceModeOnOff)
+        Me.TbSystemSettings.Controls.Add(Me.Label54)
+        Me.TbSystemSettings.Controls.Add(Me.Label53)
+        Me.TbSystemSettings.Controls.Add(Me.Label52)
+        Me.TbSystemSettings.Controls.Add(Me.Label51)
+        Me.TbSystemSettings.Controls.Add(Me.PictureBox11)
+        Me.TbSystemSettings.Controls.Add(Me.BtnEditCurrentVersion)
+        Me.TbSystemSettings.Controls.Add(Me.BtnChangeVersionNumber)
+        Me.TbSystemSettings.Controls.Add(Me.BtnCheckFeedback)
+        Me.TbSystemSettings.Controls.Add(Me.BtnEnterKiosk)
+        Me.TbSystemSettings.Controls.Add(Me.BtnInitiateMaintenanceMode)
+        Me.TbSystemSettings.Controls.Add(Me.TxtCurrentVersion_SS)
+        Me.TbSystemSettings.Controls.Add(Me.Label49)
+        Me.TbSystemSettings.Controls.Add(Me.PictureBox5)
+        Me.TbSystemSettings.Controls.Add(Me.Label37)
+        Me.TbSystemSettings.Location = New System.Drawing.Point(4, 23)
+        Me.TbSystemSettings.Name = "TbSystemSettings"
+        Me.TbSystemSettings.Padding = New System.Windows.Forms.Padding(3)
+        Me.TbSystemSettings.Size = New System.Drawing.Size(798, 440)
+        Me.TbSystemSettings.TabIndex = 8
+        Me.TbSystemSettings.Text = "System Settings"
+        Me.TbSystemSettings.UseVisualStyleBackColor = True
+        '
+        'LblMaintenanceModeOnOff
+        '
+        Me.LblMaintenanceModeOnOff.AutoSize = True
+        Me.LblMaintenanceModeOnOff.Font = New System.Drawing.Font("Raleway SemiBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblMaintenanceModeOnOff.ForeColor = System.Drawing.Color.PaleGreen
+        Me.LblMaintenanceModeOnOff.Location = New System.Drawing.Point(196, 226)
+        Me.LblMaintenanceModeOnOff.Name = "LblMaintenanceModeOnOff"
+        Me.LblMaintenanceModeOnOff.Size = New System.Drawing.Size(37, 18)
+        Me.LblMaintenanceModeOnOff.TabIndex = 33
+        Me.LblMaintenanceModeOnOff.Text = "OFF"
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Font = New System.Drawing.Font("Raleway SemiBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label54.ForeColor = System.Drawing.Color.White
+        Me.Label54.Location = New System.Drawing.Point(42, 226)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(148, 18)
+        Me.Label54.TabIndex = 32
+        Me.Label54.Text = "Maintenance Mode:"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Raleway SemiBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.ForeColor = System.Drawing.Color.PaleGreen
+        Me.Label53.Location = New System.Drawing.Point(125, 189)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(29, 18)
+        Me.Label53.TabIndex = 31
+        Me.Label53.Text = "OK"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Raleway SemiBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.ForeColor = System.Drawing.Color.White
+        Me.Label52.Location = New System.Drawing.Point(42, 189)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(77, 18)
+        Me.Label52.TabIndex = 30
+        Me.Label52.Text = "Database:"
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.ForeColor = System.Drawing.Color.White
+        Me.Label51.Location = New System.Drawing.Point(16, 158)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(115, 18)
+        Me.Label51.TabIndex = 29
+        Me.Label51.Text = "System Status:"
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = CType(resources.GetObject("PictureBox11.Image"), System.Drawing.Image)
+        Me.PictureBox11.Location = New System.Drawing.Point(19, 326)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(347, 85)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox11.TabIndex = 28
+        Me.PictureBox11.TabStop = False
+        '
+        'BtnEditCurrentVersion
+        '
+        Me.BtnEditCurrentVersion.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.BtnEditCurrentVersion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEditCurrentVersion.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditCurrentVersion.ForeColor = System.Drawing.Color.Black
+        Me.BtnEditCurrentVersion.Location = New System.Drawing.Point(170, 94)
+        Me.BtnEditCurrentVersion.Name = "BtnEditCurrentVersion"
+        Me.BtnEditCurrentVersion.Size = New System.Drawing.Size(77, 26)
+        Me.BtnEditCurrentVersion.TabIndex = 27
+        Me.BtnEditCurrentVersion.Text = "Change"
+        Me.BtnEditCurrentVersion.UseVisualStyleBackColor = False
+        '
+        'BtnChangeVersionNumber
+        '
+        Me.BtnChangeVersionNumber.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.BtnChangeVersionNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnChangeVersionNumber.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnChangeVersionNumber.ForeColor = System.Drawing.Color.Black
+        Me.BtnChangeVersionNumber.Location = New System.Drawing.Point(253, 94)
+        Me.BtnChangeVersionNumber.Name = "BtnChangeVersionNumber"
+        Me.BtnChangeVersionNumber.Size = New System.Drawing.Size(77, 26)
+        Me.BtnChangeVersionNumber.TabIndex = 26
+        Me.BtnChangeVersionNumber.Text = "Change"
+        Me.BtnChangeVersionNumber.UseVisualStyleBackColor = False
+        Me.BtnChangeVersionNumber.Visible = False
+        '
+        'BtnCheckFeedback
+        '
+        Me.BtnCheckFeedback.BackColor = System.Drawing.Color.Chartreuse
+        Me.BtnCheckFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCheckFeedback.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCheckFeedback.ForeColor = System.Drawing.Color.Black
+        Me.BtnCheckFeedback.Location = New System.Drawing.Point(566, 9)
+        Me.BtnCheckFeedback.Name = "BtnCheckFeedback"
+        Me.BtnCheckFeedback.Size = New System.Drawing.Size(226, 37)
+        Me.BtnCheckFeedback.TabIndex = 24
+        Me.BtnCheckFeedback.Text = "Check Feedback"
+        Me.BtnCheckFeedback.UseVisualStyleBackColor = False
+        '
+        'BtnEnterKiosk
+        '
+        Me.BtnEnterKiosk.BackColor = System.Drawing.Color.MediumSpringGreen
+        Me.BtnEnterKiosk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEnterKiosk.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEnterKiosk.ForeColor = System.Drawing.Color.Black
+        Me.BtnEnterKiosk.Location = New System.Drawing.Point(566, 373)
+        Me.BtnEnterKiosk.Name = "BtnEnterKiosk"
+        Me.BtnEnterKiosk.Size = New System.Drawing.Size(226, 37)
+        Me.BtnEnterKiosk.TabIndex = 23
+        Me.BtnEnterKiosk.Text = "Enter Kiosk Mode"
+        Me.BtnEnterKiosk.UseVisualStyleBackColor = False
+        '
+        'BtnInitiateMaintenanceMode
+        '
+        Me.BtnInitiateMaintenanceMode.BackColor = System.Drawing.Color.IndianRed
+        Me.BtnInitiateMaintenanceMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnInitiateMaintenanceMode.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnInitiateMaintenanceMode.ForeColor = System.Drawing.Color.Black
+        Me.BtnInitiateMaintenanceMode.Location = New System.Drawing.Point(566, 326)
+        Me.BtnInitiateMaintenanceMode.Name = "BtnInitiateMaintenanceMode"
+        Me.BtnInitiateMaintenanceMode.Size = New System.Drawing.Size(226, 37)
+        Me.BtnInitiateMaintenanceMode.TabIndex = 21
+        Me.BtnInitiateMaintenanceMode.Text = "Initiate Maintenance Mode"
+        Me.BtnInitiateMaintenanceMode.UseVisualStyleBackColor = False
+        '
+        'TxtCurrentVersion_SS
+        '
+        Me.TxtCurrentVersion_SS.Enabled = False
+        Me.TxtCurrentVersion_SS.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCurrentVersion_SS.Location = New System.Drawing.Point(19, 96)
+        Me.TxtCurrentVersion_SS.Name = "TxtCurrentVersion_SS"
+        Me.TxtCurrentVersion_SS.Size = New System.Drawing.Size(148, 23)
+        Me.TxtCurrentVersion_SS.TabIndex = 13
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Raleway", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.ForeColor = System.Drawing.Color.White
+        Me.Label49.Location = New System.Drawing.Point(16, 72)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(119, 18)
+        Me.Label49.TabIndex = 12
+        Me.Label49.Text = "Current Version"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Enabled = False
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.InitialImage = CType(resources.GetObject("PictureBox5.InitialImage"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(13, 9)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(29, 35)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 11
+        Me.PictureBox5.TabStop = False
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Raleway", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.Color.White
+        Me.Label37.Location = New System.Drawing.Point(47, 13)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(222, 31)
+        Me.Label37.TabIndex = 9
+        Me.Label37.Text = "System Settings"
         '
         'Panel1
         '
@@ -2177,185 +2717,6 @@ Partial Class frmAdminControls
         Me.PbManagePrivileges.TabIndex = 10
         Me.PbManagePrivileges.TabStop = False
         '
-        'GroupBox7
-        '
-        Me.GroupBox7.Controls.Add(Me.LblRefNo_Req)
-        Me.GroupBox7.Controls.Add(Me.Label46)
-        Me.GroupBox7.Controls.Add(Me.LblReqState_Req)
-        Me.GroupBox7.Controls.Add(Me.Label42)
-        Me.GroupBox7.Controls.Add(Me.LblUniqueID_Req)
-        Me.GroupBox7.Controls.Add(Me.Label38)
-        Me.GroupBox7.Controls.Add(Me.LblFullName_Req)
-        Me.GroupBox7.Controls.Add(Me.Label35)
-        Me.GroupBox7.Enabled = False
-        Me.GroupBox7.ForeColor = System.Drawing.Color.White
-        Me.GroupBox7.Location = New System.Drawing.Point(493, 20)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(291, 229)
-        Me.GroupBox7.TabIndex = 11
-        Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Request Information"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.ForeColor = System.Drawing.Color.White
-        Me.Label35.Location = New System.Drawing.Point(16, 27)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(107, 14)
-        Me.Label35.TabIndex = 12
-        Me.Label35.Text = "Recipient's Name:"
-        '
-        'LblFullName_Req
-        '
-        Me.LblFullName_Req.AutoSize = True
-        Me.LblFullName_Req.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFullName_Req.ForeColor = System.Drawing.Color.White
-        Me.LblFullName_Req.Location = New System.Drawing.Point(16, 46)
-        Me.LblFullName_Req.Name = "LblFullName_Req"
-        Me.LblFullName_Req.Size = New System.Drawing.Size(82, 18)
-        Me.LblFullName_Req.TabIndex = 13
-        Me.LblFullName_Req.Text = "Full Name"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.ForeColor = System.Drawing.Color.White
-        Me.Label38.Location = New System.Drawing.Point(16, 75)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(61, 14)
-        Me.Label38.TabIndex = 14
-        Me.Label38.Text = "UniqueID:"
-        '
-        'LblUniqueID_Req
-        '
-        Me.LblUniqueID_Req.AutoSize = True
-        Me.LblUniqueID_Req.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUniqueID_Req.ForeColor = System.Drawing.Color.White
-        Me.LblUniqueID_Req.Location = New System.Drawing.Point(16, 91)
-        Me.LblUniqueID_Req.Name = "LblUniqueID_Req"
-        Me.LblUniqueID_Req.Size = New System.Drawing.Size(103, 18)
-        Me.LblUniqueID_Req.TabIndex = 15
-        Me.LblUniqueID_Req.Text = "LOA-XXXXXX"
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.ForeColor = System.Drawing.Color.White
-        Me.Label42.Location = New System.Drawing.Point(16, 124)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(90, 14)
-        Me.Label42.TabIndex = 16
-        Me.Label42.Text = "Requesting for:"
-        '
-        'LblReqState_Req
-        '
-        Me.LblReqState_Req.AutoSize = True
-        Me.LblReqState_Req.Font = New System.Drawing.Font("Raleway ExtraBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblReqState_Req.ForeColor = System.Drawing.Color.White
-        Me.LblReqState_Req.Location = New System.Drawing.Point(17, 139)
-        Me.LblReqState_Req.Name = "LblReqState_Req"
-        Me.LblReqState_Req.Size = New System.Drawing.Size(26, 18)
-        Me.LblReqState_Req.TabIndex = 17
-        Me.LblReqState_Req.Text = "---"
-        '
-        'Label46
-        '
-        Me.Label46.AutoSize = True
-        Me.Label46.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.ForeColor = System.Drawing.Color.White
-        Me.Label46.Location = New System.Drawing.Point(16, 187)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(51, 14)
-        Me.Label46.TabIndex = 18
-        Me.Label46.Text = "Ref. No.:"
-        '
-        'LblRefNo_Req
-        '
-        Me.LblRefNo_Req.AutoSize = True
-        Me.LblRefNo_Req.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblRefNo_Req.ForeColor = System.Drawing.Color.White
-        Me.LblRefNo_Req.Location = New System.Drawing.Point(17, 202)
-        Me.LblRefNo_Req.Name = "LblRefNo_Req"
-        Me.LblRefNo_Req.Size = New System.Drawing.Size(83, 14)
-        Me.LblRefNo_Req.TabIndex = 19
-        Me.LblRefNo_Req.Text = "LOA-XXXXXX"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.SpringGreen
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(8, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(144, 42)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "APPROVE (Send L-Credits)"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.IndianRed
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(157, 5)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(142, 42)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Reject (Send L-Credits)"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.SpringGreen
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(8, 9)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(144, 42)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "APPROVE (Premium)"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.IndianRed
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Raleway", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(157, 9)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(142, 42)
-        Me.Button4.TabIndex = 15
-        Me.Button4.Text = "Reject (Premium)"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'PnlButtonP_Req
-        '
-        Me.PnlButtonP_Req.Controls.Add(Me.Button4)
-        Me.PnlButtonP_Req.Controls.Add(Me.Button3)
-        Me.PnlButtonP_Req.Enabled = False
-        Me.PnlButtonP_Req.Location = New System.Drawing.Point(485, 315)
-        Me.PnlButtonP_Req.Name = "PnlButtonP_Req"
-        Me.PnlButtonP_Req.Size = New System.Drawing.Size(308, 56)
-        Me.PnlButtonP_Req.TabIndex = 16
-        '
-        'PnlButtonLC_Req
-        '
-        Me.PnlButtonLC_Req.Controls.Add(Me.Button2)
-        Me.PnlButtonLC_Req.Controls.Add(Me.Button1)
-        Me.PnlButtonLC_Req.Enabled = False
-        Me.PnlButtonLC_Req.Location = New System.Drawing.Point(485, 250)
-        Me.PnlButtonLC_Req.Name = "PnlButtonLC_Req"
-        Me.PnlButtonLC_Req.Size = New System.Drawing.Size(307, 58)
-        Me.PnlButtonLC_Req.TabIndex = 17
-        '
         'frmAdminControls
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2384,12 +2745,14 @@ Partial Class frmAdminControls
         Me.TbAdminControlCenter.ResumeLayout(False)
         Me.TbManageUsers.ResumeLayout(False)
         Me.TbManageUsers.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PbProfilePicture, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvUserList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TbAddUsers.ResumeLayout(False)
         Me.TbAddUsers.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GrpAccType.ResumeLayout(False)
@@ -2406,6 +2769,7 @@ Partial Class frmAdminControls
         CType(Me.DgvBusList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TbManagePrivileges.ResumeLayout(False)
         Me.TbManagePrivileges.PerformLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.PbProfile_ManagePriv, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2413,6 +2777,7 @@ Partial Class frmAdminControls
         CType(Me.DgvManagePrivileges, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TbAddLCredits.ResumeLayout(False)
         Me.TbAddLCredits.PerformLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         CType(Me.PbShowCode, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2423,6 +2788,7 @@ Partial Class frmAdminControls
         CType(Me.DgvLCreditCodes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TbLoadLCredits.ResumeLayout(False)
         Me.TbLoadLCredits.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         Me.PnlLoadInfo.ResumeLayout(False)
@@ -2430,15 +2796,19 @@ Partial Class frmAdminControls
         CType(Me.PbProfilePic_Load, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TbUserReq.ResumeLayout(False)
         Me.TbUserReq.PerformLayout()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         CType(Me.DgvLoadRequest, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlButtonP_Req.ResumeLayout(False)
+        Me.PnlButtonLC_Req.ResumeLayout(False)
+        Me.TbSystemSettings.ResumeLayout(False)
+        Me.TbSystemSettings.PerformLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         CType(Me.PbAddLCredits, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLoadLCredits, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbManagePrivileges, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox7.PerformLayout()
-        Me.PnlButtonP_Req.ResumeLayout(False)
-        Me.PnlButtonLC_Req.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -2604,9 +2974,35 @@ Partial Class frmAdminControls
     Friend WithEvents LblFullName_Req As Label
     Friend WithEvents Label35 As Label
     Friend WithEvents PnlButtonP_Req As Panel
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnRejectP_Req As Button
+    Friend WithEvents BtnApproveP_Req As Button
     Friend WithEvents PnlButtonLC_Req As Panel
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnRejectL_Req As Button
+    Friend WithEvents BtnApproveL_Req As Button
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Label40 As Label
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Label44 As Label
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents Label48 As Label
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents TbSystemSettings As TabPage
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents Label37 As Label
+    Friend WithEvents TxtCurrentVersion_SS As TextBox
+    Friend WithEvents Label49 As Label
+    Friend WithEvents BtnEnterKiosk As Button
+    Friend WithEvents BtnInitiateMaintenanceMode As Button
+    Friend WithEvents BtnCheckFeedback As Button
+    Friend WithEvents BtnChangeVersionNumber As Button
+    Friend WithEvents BtnEditCurrentVersion As Button
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents Label50 As Label
+    Friend WithEvents TxtSearchFullName_Privilege As TextBox
+    Friend WithEvents LblMaintenanceModeOnOff As Label
+    Friend WithEvents Label54 As Label
+    Friend WithEvents Label53 As Label
+    Friend WithEvents Label52 As Label
+    Friend WithEvents Label51 As Label
 End Class

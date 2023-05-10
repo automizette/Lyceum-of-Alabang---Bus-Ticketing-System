@@ -41,6 +41,28 @@ Public Class frmOTPValidation
                     Case "CHANGE_OTP"
                         Me.Close()
                         frmAddOTP.Show()
+                    Case "CHANGE_EMAIL_ADMIN"
+                        frmModAdminMainMenu.TxtEmail_Account.Enabled = True
+                        frmModAdminMainMenu.BtnSaveEmail_Account.Visible = True
+                        frmModAdminMainMenu.BtnChangeEmail_Account.Text = "Back"
+                        frmModAdminMainMenu.BtnChangeEmail_Account.BackColor = Color.IndianRed
+                        Me.Close()
+                        Me.Tag = "NO_TAG"
+                    Case "CHANGE_PASSWORD_ADMIN"
+                        frmChangePassword_Admin.Show()
+                        Me.Close()
+                        Me.Tag = "NO_TAG"
+                    Case "CHANGE_OTP_ADMIN"
+                        Me.Close()
+                        frmAddOTP_Admin.Show()
+                    Case "DEACTIVATE_ACCOUNT_ADMIN"
+                        CollectData.AccountActivation(frmModAdminMainMenu.LblUniqueID_MainMenu.Text, False)
+                        MessageBox.Show("Account has been deactivated. If you want to reactivated your account, please reach out to the administration", "Account deactivation complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        frmChangePassword.Close()
+                        frmModAdminMainMenu.Close()
+                        frmLogin.Show()
+                        frmLogin.TxtUsername.Text = Nothing
+                        frmLogin.TxtPassword.Text = Nothing
                 End Select
             Else
                 Select Case InputAttempts
@@ -63,6 +85,8 @@ Public Class frmOTPValidation
                         CollectData.AccountActivation(frmUserMainMenu.LblUniqueID_MainMenu.Text, False)
                         Me.Close()
                         frmUserMainMenu.Close()
+                        frmModAdminMainMenu.Close()
+                        frmAdminControls.Close()
                         frmLogin.Show()
                         frmLogin.TxtUsername.Text = Nothing
                         frmLogin.TxtPassword.Text = Nothing

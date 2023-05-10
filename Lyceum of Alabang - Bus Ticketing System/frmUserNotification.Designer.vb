@@ -86,7 +86,7 @@ Partial Class frmUserNotification
         Me.DgvNotificationsMenu.RowHeadersWidth = 20
         Me.DgvNotificationsMenu.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DgvNotificationsMenu.RowTemplate.Height = 40
-        Me.DgvNotificationsMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.DgvNotificationsMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvNotificationsMenu.ShowEditingIcon = False
         Me.DgvNotificationsMenu.Size = New System.Drawing.Size(718, 435)
         Me.DgvNotificationsMenu.TabIndex = 2

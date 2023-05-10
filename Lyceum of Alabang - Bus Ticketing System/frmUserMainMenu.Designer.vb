@@ -24,10 +24,10 @@ Partial Class frmUserMainMenu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUserMainMenu))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PbHome = New System.Windows.Forms.PictureBox()
         Me.PbBook = New System.Windows.Forms.PictureBox()
         Me.PbBookList = New System.Windows.Forms.PictureBox()
@@ -466,9 +466,9 @@ Partial Class frmUserMainMenu
         Me.PnlBFSCenter.Controls.Add(Me.BtnConfirmEmail)
         Me.PnlBFSCenter.Controls.Add(Me.TxtEmail)
         Me.PnlBFSCenter.Controls.Add(Me.Label8)
-        Me.PnlBFSCenter.Location = New System.Drawing.Point(289, 6)
+        Me.PnlBFSCenter.Location = New System.Drawing.Point(368, 6)
         Me.PnlBFSCenter.Name = "PnlBFSCenter"
-        Me.PnlBFSCenter.Size = New System.Drawing.Size(557, 47)
+        Me.PnlBFSCenter.Size = New System.Drawing.Size(478, 47)
         Me.PnlBFSCenter.TabIndex = 13
         Me.PnlBFSCenter.Visible = False
         '
@@ -476,7 +476,7 @@ Partial Class frmUserMainMenu
         '
         Me.BtnConfirmEmail.BackColor = System.Drawing.Color.HotPink
         Me.BtnConfirmEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnConfirmEmail.Location = New System.Drawing.Point(372, 15)
+        Me.BtnConfirmEmail.Location = New System.Drawing.Point(378, 16)
         Me.BtnConfirmEmail.Name = "BtnConfirmEmail"
         Me.BtnConfirmEmail.Size = New System.Drawing.Size(93, 23)
         Me.BtnConfirmEmail.TabIndex = 14
@@ -486,7 +486,7 @@ Partial Class frmUserMainMenu
         'TxtEmail
         '
         Me.TxtEmail.Font = New System.Drawing.Font("Raleway SemiBold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEmail.Location = New System.Drawing.Point(66, 15)
+        Me.TxtEmail.Location = New System.Drawing.Point(72, 16)
         Me.TxtEmail.Name = "TxtEmail"
         Me.TxtEmail.Size = New System.Drawing.Size(293, 23)
         Me.TxtEmail.TabIndex = 16
@@ -496,7 +496,7 @@ Partial Class frmUserMainMenu
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(4, 19)
+        Me.Label8.Location = New System.Drawing.Point(10, 20)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 19)
         Me.Label8.TabIndex = 15
@@ -820,22 +820,22 @@ Partial Class frmUserMainMenu
         Me.DgvBusList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvBusList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvBusList.BackgroundColor = System.Drawing.Color.CornflowerBlue
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        Me.DgvBusList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
+        Me.DgvBusList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DgvBusList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvBusList.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSteelBlue
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvBusList.DefaultCellStyle = DataGridViewCellStyle6
         Me.DgvBusList.Location = New System.Drawing.Point(6, 33)
         Me.DgvBusList.MultiSelect = False
         Me.DgvBusList.Name = "DgvBusList"
@@ -925,7 +925,7 @@ Partial Class frmUserMainMenu
         Me.Panel2.Controls.Add(Me.PnlLCreditConverter)
         Me.Panel2.Location = New System.Drawing.Point(6, 50)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(838, 416)
+        Me.Panel2.Size = New System.Drawing.Size(838, 425)
         Me.Panel2.TabIndex = 14
         '
         'BtnCancelReservation
@@ -1114,23 +1114,23 @@ Partial Class frmUserMainMenu
         Me.DgvBookList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvBookList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvBookList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CornflowerBlue
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvBookList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.LightSkyBlue
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.CornflowerBlue
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvBookList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DgvBookList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(176, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(244, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(244, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(66, Byte), Integer))
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvBookList.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(176, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Raleway", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(244, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(244, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(66, Byte), Integer))
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvBookList.DefaultCellStyle = DataGridViewCellStyle8
         Me.DgvBookList.Location = New System.Drawing.Point(12, 3)
         Me.DgvBookList.MultiSelect = False
         Me.DgvBookList.Name = "DgvBookList"
@@ -1917,8 +1917,8 @@ Partial Class frmUserMainMenu
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
-        Me.AboutToolStripMenuItem.Text = "About"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Text = "About the sytsem"
         '
         'Label2
         '

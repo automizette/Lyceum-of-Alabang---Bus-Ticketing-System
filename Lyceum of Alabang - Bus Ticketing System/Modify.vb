@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.IO
 
 Public Class Modify
     Public Shared Sub CheckIfPremiumDeadlineMeets(UniqueID As String)
@@ -158,7 +159,7 @@ Public Class Modify
         Dim ImagePath As String = Application.StartupPath & "\frmUserProfilePictures\"
 
         If System.IO.File.Exists(ImagePath & UserImage) Then
-            frmUserMainMenu.PbProfilePicture.Image = Image.FromFile(ImagePath & UserImage)
+            frmUserMainMenu.PbProfilePicture.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & UserImage)), True, False)
         Else
             frmUserMainMenu.PbProfilePicture.Image = frmUserMainMenu.PbProfilePicture.InitialImage
         End If
@@ -169,7 +170,7 @@ Public Class Modify
         Dim UserImage As String = UniqueID & ".jpg"
 
         If System.IO.File.Exists(ImagePath & UserImage) Then
-            Pic.Image = Image.FromFile(ImagePath & UserImage)
+            Pic.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & UserImage)), True, False)
         Else
             Pic.Image = Pic.InitialImage
         End If
@@ -182,6 +183,8 @@ Public Class Modify
         Dim UserImage As String = UniqueID & ".jpg"
         Dim ImagePath As String = Application.StartupPath & "\frmUserProfilePictures\"
 
+
+
         If Btn1.Text = "Change" Then
             With OFD
                 .CheckFileExists = True
@@ -190,7 +193,8 @@ Public Class Modify
                 .FilterIndex = 1
 
                 If .ShowDialog = DialogResult.OK Then
-                    DuplicateImage = Image.FromFile(.FileName)
+                    DuplicateImage = Image.FromStream(New MemoryStream(File.ReadAllBytes(.FileName)), True, False)
+                    'DuplicateImage = Image.FromFile(.FileName)
                     Pb.Image = DuplicateImage
 
                     Btn1.BackColor = Color.IndianRed
@@ -198,7 +202,7 @@ Public Class Modify
                     Btn2.Visible = True
                 Else
                     If System.IO.File.Exists(ImagePath & UserImage) Then
-                        Pb.Image = Image.FromFile(ImagePath & UserImage)
+                        Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & UserImage)), True, False)
                     End If
                     .Dispose()
                 End If
@@ -287,7 +291,8 @@ Public Class Modify
                 .FilterIndex = 1
 
                 If .ShowDialog = DialogResult.OK Then
-                    DuplicateImage = Image.FromFile(.FileName)
+                    DuplicateImage = Image.FromStream(New MemoryStream(File.ReadAllBytes(.FileName)), True, False)
+                    'DuplicateImage = Image.FromFile(.FileName)
                     Picture.Image = DuplicateImage
 
                     frmUserMainMenu.BtnChangePicture.BackColor = Color.IndianRed
@@ -295,7 +300,11 @@ Public Class Modify
                     frmUserMainMenu.BtnSaveImage.Visible = True
                 Else
                     If System.IO.File.Exists(ImagePath & UserImage) Then
-                        frmUserMainMenu.PbProfilePicture.Image = Image.FromFile(ImagePath & UserImage)
+                        Picture.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & UserImage)), True, False)
+                        'Dim Profile = ImagePath & UserImage
+                        'Dim st = New MemoryStream(Profile)
+                    Else
+                        Picture.Image = Picture.InitialImage
                     End If
                     .Dispose()
                 End If
@@ -318,7 +327,9 @@ Public Class Modify
                 .FilterIndex = 1
 
                 If .ShowDialog = DialogResult.OK Then
-                    DuplicateImage = Image.FromFile(.FileName)
+                    frmUserMainMenu.PbProfilePicture.Image.Dispose()
+                    DuplicateImage = Image.FromStream(New MemoryStream(File.ReadAllBytes(.FileName)), True, False)
+                    'DuplicateImage = Image.FromFile(.FileName)
                     Picture.Image = DuplicateImage
 
                     frmUserMainMenu.BtnChangeBanner.BackColor = Color.IndianRed
@@ -326,7 +337,7 @@ Public Class Modify
                     frmUserMainMenu.BtnSaveBanner.Visible = True
                 Else
                     If System.IO.File.Exists(ImagePath & UserImage) Then
-                        frmUserMainMenu.PbProfilePicture.Image = Image.FromFile(ImagePath & UserImage)
+                        frmUserMainMenu.PbProfilePicture.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & UserImage)), True, False)
                     End If
                     .Dispose()
                 End If
@@ -347,7 +358,8 @@ Public Class Modify
                 .FilterIndex = 1
 
                 If .ShowDialog = DialogResult.OK Then
-                    DuplicateImage = Image.FromFile(.FileName)
+                    DuplicateImage = Image.FromStream(New MemoryStream(File.ReadAllBytes(.FileName)), True, False)
+                    'DuplicateImage = Image.FromFile(.FileName)
                     Pictures.Image = DuplicateImage
 
                     frmSendFeedback.BtnInsertImage.BackColor = Color.IndianRed
@@ -365,7 +377,7 @@ Public Class Modify
         Dim ImagePath As String = Application.StartupPath & "\frmAdvertise\"
 
         If System.IO.File.Exists(ImagePath & ImageName) Then
-            frmUserMainMenu.PbBanner_ForToday.Image = Image.FromFile(ImagePath & ImageName)
+            frmUserMainMenu.PbBanner_ForToday.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(ImagePath & ImageName)), True, False)
         Else
             frmUserMainMenu.PbBanner_ForToday.Image = frmUserMainMenu.PbBanner_ForToday.InitialImage
         End If
@@ -382,7 +394,7 @@ Public Class Modify
         While DataReader.Read
             If DataReader("IsPremium") = True Then
                 If System.IO.File.Exists(PremiumBannerFolder & UserImage) Then
-                    frmUserMainMenu.PbUserProfileBanner.Image = Image.FromFile(PremiumBannerFolder & UserImage)
+                    frmUserMainMenu.PbUserProfileBanner.Image = Image.FromStream(New MemoryStream(File.ReadAllBytes(PremiumBannerFolder & UserImage)), True, False)
                 Else
                     frmUserMainMenu.PbUserProfileBanner.Image = frmUserMainMenu.PbUserProfileBanner.InitialImage
                 End If
@@ -428,6 +440,12 @@ Public Class Modify
                 frmUserMainMenu.PnlLCredits_Account.Visible = False
             End If
         End If
+    End Sub
+
+    Public Shared Sub NewAccountValidation(UniqueID As String)
+        Sql = "UPDATE UserSettings SET IsAccountNew = True WHERE UniqueID ='" & UniqueID & "'"
+        Command = New OleDbCommand(Sql, Connection)
+        Command.ExecuteNonQuery()
     End Sub
 
     Public Shared Sub CheckUserSetup(UniqueID As String)
